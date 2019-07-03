@@ -1,0 +1,1035 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{polski}
+\usepackage{helvet}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{geometry}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{subfig}
+\usepackage{enumitem}
+\usepackage{float}
+
+\usepackage{cleveref}
+% \newcommand{\crefrangeconjunction}{--}
+\crefrangeformat{table}{Tab. #3#1#4--#5#2#6}
+\crefrangeformat{figure}{Rys. #3#1#4--#5#2#6}
+
+
+\geometry{hmargin={2cm, 2cm}, height=10.0in}
+
+\begin{document}
+
+% =====  STRONA TYTULOWA PRACY MAGISTERSKIEJKIEJ ====
+% ostatnia modyfikacja: 2009/07/01, K. Malarz
+
+\thispagestyle{empty}
+%% ------------------------ NAGLOWEK STRONY ---------------------------------
+\includegraphics[height=37.5mm]{img/agh_nzw_a_pl_1w_wbr_cmyk.eps}\\
+\rule{30mm}{0pt}
+{\large \textsf{Wydział Fizyki i Informatyki Stosowanej}}\\
+\rule{\textwidth}{3pt}\\
+\rule[2ex]
+{\textwidth}{1pt}\\
+\vspace{7ex}
+\begin{center}
+{\LARGE \bf \textsf{Praca magisterska}}\\
+\vspace{13ex}
+% --------------------------- IMIE I NAZWISKO -------------------------------
+{\bf \Large \textsf{Michał Barej}}\\
+\vspace{3ex}
+{\sf\small kierunek studiów:} {\bf\small \textsf{Fizyka Techniczna}}\\
+\vspace{1.5ex}
+
+%% ------------------------ TYTUL PRACY --------------------------------------
+{\bf \huge \textsf{To be determined. To be determined. To be determined. To be determined.}}\\
+\vspace{14ex}
+%% ------------------------ OPIEKUN PRACY ------------------------------------
+{\Large Opiekun: \bf \textsf{dr hab. Adam Bzdak}}\\
+\vspace{22ex}
+{\large \bf \textsf{Kraków, czerwiec 2019}}
+\end{center}
+%% =====  STRONA TYTUŁOWA PRACY MAGISTERSKIEJKIEJ ====
+
+\newpage
+
+%% =====  TYŁ STRONY TYTUŁOWEJ PRACY MAGISTERSKIEJKIEJ ====
+\begin{center}
+        {\bf\large\textsf{Oświadczenie studenta}}
+\end{center}
+
+
+{\sf Uprzedzony(-a) o odpowiedzialności karnej na podstawie art. 115 ust. 1 i 2 ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (t.j. Dz. U. z 2018 r. poz. 1191 z późn. zm.): ,,Kto przywłaszcza sobie autorstwo albo wprowadza w błąd co do autorstwa całości lub części cudzego utworu albo artystycznego wykonania, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 3. Tej samej karze podlega, kto rozpowszechnia bez podania nazwiska lub pseudonimu twórcy cudzy utwór w wersji oryginalnej albo w postaci opracowania, artystyczne wykonanie albo publicznie zniekształca taki utwór, artystyczne wykonanie, fonogram, wideogram lub nadanie.'', a także uprzedzony(-a) o odpowiedzialności dyscyplinarnej na podstawie art. 307 ust. 1 ustawy z dnia 20 lipca 2018 r. Prawo o szkolnictwie wyższym i nauce (Dz. U. z 2018 r. poz. 1668 z późn. zm.) ,,Student podlega odpowiedzialności dyscyplinarnej za naruszenie przepisów obowiązujących w~uczelni oraz za czyn uchybiający godności studenta.'', oświadczam, że niniejszą pracę dyplomową wykonałem(-am) osobiście i samodzielnie i nie korzystałem(-am) ze źródeł innych niż wymienione w pracy.
+
+\bigskip
+
+Jednocześnie Uczelnia informuje, że zgodnie z art. 15a ww. ustawy o prawie autorskim i prawach pokrewnych Uczelni przysługuje pierwszeństwo w opublikowaniu pracy dyplomowej studenta. Jeżeli Uczelnia nie opublikowała pracy dyplomowej w terminie 6 miesięcy od dnia jej obrony, autor może ją opublikować, chyba że praca jest częścią utworu zbiorowego. Ponadto Uczelnia jako podmiot, o którym mowa w art. 7 ust. 1 pkt 1 ustawy z dnia 20 lipca 2018 r. --- Prawo o szkolnictwie wyższym i nauce (Dz. U. z 2018 r. poz. 1668 z późn. zm.), może korzystać bez wynagrodzenia i bez konieczności uzyskania zgody autora z utworu stworzonego przez studenta w wyniku wykonywania obowiązków związanych z odbywaniem studiów, udostępniać utwór ministrowi właściwemu do spraw szkolnictwa wyższego i~nauki oraz korzystać z utworów znajdujących się w prowadzonych przez niego bazach danych, w celu sprawdzania z wykorzystaniem systemu antyplagiatowego. Minister właściwy do spraw szkolnictwa wyższego i nauki może korzystać z prac dyplomowych znajdujących się w prowadzonych przez niego bazach danych w zakresie niezbędnym do zapewnienia prawidłowego utrzymania i rozwoju tych baz oraz współpracujących z nimi systemów informatycznych.}
+
+
+\vspace{14ex}
+
+\begin{center}
+\begin{tabular}{lr}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &
+................................................................. \\
+~ & {\sf (czytelny podpis)}\\
+\end{tabular}
+\end{center}
+
+%% =====  TYL STRONY TYTULOWEJ PRACY MAGISTERSKIEJKIEJ ====
+
+\newpage
+\rightline{Kraków, ?? czerwca 20??}
+\begin{center}
+{\bf Tematyka pracy magisterskiej i praktyki dyplomowej
+Michała Bareja,
+studenta drugiego roku studiów drugiego stopnia na kierunku fizyka techniczna}\\
+\end{center}
+
+Temat pracy magisterskiej:
+{\bf To be determined. To be determined. To be determined. To be determined. }\\
+
+\begin{tabular}{rl}
+
+Opiekun pracy:                  & dr hab. Adam Bzdak\\
+Recenzenci pracy:               & dr hab. ..........\\
+Miejsce praktyki dyplomowej:    & WFiIS AGH, Kraków\\
+\end{tabular}
+
+\begin{center}
+{\bf Program pracy magisterskiej i praktyki dyplomowej}
+\end{center}
+
+\begin{enumerate}
+\item Omówienie realizacji pracy magisterskiej z opiekunem.
+\item Zebranie i opracowanie literatury dotyczącej tematu pracy.
+\item Praktyka dyplomowa:
+\begin{itemize}
+\item zapoznanie się z ideą...,
+\item uczestnictwo w eksperymentach/przygotwanie oprogramowania...,
+\item dyskusja i analiza wyników...
+\item sporządzenie sprawozdania z praktyki.
+\end{itemize}
+\item Kontynuacja obliczeń związanych z tematem pracy magisterskiej.
+\item Zebranie i opracowanie wyników obliczeń.
+\item Analiza wyników obliczeń numerycznych, ich omówienie i zatwierdzenie przez opiekuna.
+\item Opracowanie redakcyjne pracy.
+\end{enumerate}
+
+
+\noindent
+Termin oddania w dziekanacie: ?? czerwca 2019\\[1cm]
+
+\begin{center}
+\begin{tabular}{lcr}
+.............................................................. & ~~~ &
+.............................................................. \\
+(podpis kierownika katedry) & & (podpis opiekuna) \\
+\end{tabular}
+\end{center}
+
+\newpage
+
+\noindent
+Na kolejnych dwóch stronach proszę dołączyć kolejno recenzje pracy popełnione przez Opiekuna oraz Recenzenta (wydrukowane z systemu MISIO i podpisane przez odpowiednio Opiekuna i Recenzenta pracy). Papierową wersję pracy (zawierającą podpisane recenzje) proszę złożyć w dziekanacie celem rejestracji co najmniej na tydzień przed planowaną obroną.
+
+\linespread{1.3}
+\selectfont
+
+
+\newpage
+\linespread{1.3}
+\selectfont
+
+\newpage
+Recenzja Opiekuna pracy.
+
+\newpage
+Recenzja Recenzenta.
+
+
+\vspace{85mm}
+\newpage
+\tableofcontents
+
+\newpage
+\section{Wstęp}
+\subsection{Chromodynamika kwantowa (QCD)}
+\paragraph{}
+Chromodynamika kwantowa (ang. \textit{Quantum Chromodynamics (QCD)}) jest teorią opisującą oddziaływania silne, które są odpowiedzialne za interakcje pomiędzy kwarkami, dzięki którym są one związane w hadrony oraz pośrednio za utrzymywanie neutronów i protonów razem, aby utworzyć jądro atomowe. 
+
+Teoria ta jest podobna do elektrodynamiki kwantowej (QED). Oddziaływanie zachodzi bowiem poprzez wymianę cząstki pośredniczącej, w przypadku QED fotonu, zaś w QCD - gluonu. O ile do określenia ładunku elektrycznego wystarczy jedna liczba (dodatnia lub ujemna), to do opisu ładunku kolorowego (ładunku w oddziaływaniach silnych) potrzeba już 3 takich liczb określających (umownie) kolory czerwony, zielony i niebieski. Ponadto, w danym wierzchołku oddziaływania kwark może zmienić ładunek kolorowy. Jednocześnie kolor jest zachowany. Dlatego gluony przenoszą ładunku kolorowe (dla kontrastu fotony nie przenoszą ładunku elektrycznego) i, w konsekwencji, możliwe są oddziaływania gluonów z gluonami. Podobnie jak w przypadku QED, można do opisu i rachunków stosować diagramy Feynmana, ale w QCD jest to możlliwe dzięki własnościom tzw. ,,biegnącej'' stałej sprzężenia. \cite{griffiths}
+
+Oprócz tego jakościowego opisu chromodynamiki kwantowej, należy też podkreślić, że znany jest lagrangian QCD, podobny do lagrangianu QED i mający tylko kilka wolnych parametrów. Wydawałoby się więc, że w QCD wszystko jest jasne. Tymczasem, zwróćmy uwagę, że oddziaływania silne zachodzą w bardzo różnych stanach. W typowych warunkach naszego życia codziennego kwarki nie występują swobodnie, a zawsze są związane (ang. \textit{confined}) w hadrony. Wiadomo także, że we wczesnym Wszechświecie, gdy panowała ogromna energia i gęstość, kwarki i gluony nie były związane, tylko swobodne, tworząc stan plazmy kwarkowo-gluonowej. Podobne warunki udało się (w maleńkiej objętości) utworzyć w zderzeniach ciężkich jonów przeprowadzanych na \textit{Relativistic Heavy Ion Collider (RHIC)} w BNL oraz na \textit{Large Hadron Collider (LHC)} w CERN-ie {\color{blue} [referncje???]}. Niestety, okazuje się, że równania QCD dają się rozwiązać w sposób analityczny tylko dla wysokich energii i krótkich dystansów. Wtedy bowiem działają rachunki perturbacyjne, na których opierają się obliczenia związane z diagramami Feynmana.
+
+Kolejnym krokiem były próby zastosowania metod numerycznych. Lattice QCD polega na dyskretyzacji lagrangianu QCD w 4-wymiarowej, czasoprzestrzennej siatce i używaniu metod Monte Carlo. Niestety i ta teoria ma swoje ogranicznia - może być stosowana tylko dla niskiego potencjału bariochemicznego. Poza tymi szczególnymi obszarami, pozostaje obecnie jedynie budowanie modeli fenomenologicznych.
+
+\subsection{Diagram fazowy QCD}
+\paragraph{}
+Materia podlegająca oddziaływaniom silnym może zatem występować w różnych stanach, tak jak wymienione wcześniej, hadrony (wśród których wyróżnić można dobrze nam znane protony i neutrony), a także plazma kwarkowo-gluonową. Różne stany \textit{fazowe} można opisać za pomocą diagramu fazowego QCD (zob. Rys. \ref{fig:qcd-diag-ab}). Na osi pionowej przedstawia się zwykle temperaturę, a na poziomej gęstość barionową lub potencjał bariochemiczny.
+
+Wyjaśnijmy, co to jest potencjał bariochemiczny. Okazuje się, że podstawowe wielkości w termodynamice można zdefiniować w analogii do siebie nawzajem. Mianowicie (por. np. \cite{schroeder}) :
+\begin{itemize}
+	\item Temperatura jest tendencją układu do przyjmowania lub oddawania energii termicznej i może być określona wzorem:
+	\begin{equation}
+	\frac{1}{T} = \left( \frac{\partial S}{\partial U} \right)_{N,V} \,,
+	\end{equation}
+	gdzie: $T$ - jest temperaturą, $S$ - entropią, $U$ - energią wewnętrzną, $N$ - liczbą cząstek, $V$ - objętością i w tym wypadku $N$ i $V$ pozostają stałe. \\
+	Dwa układy są w równowadze termicznej, jeśli mają taką samą temperaturę.
+	\item Ciśnienie jest tendencją układu do przyjmowania lub oddawania objętości i może być określone wzorem:
+	\begin{equation}
+	p = T \left( \frac{\partial S}{\partial V} \right)_{U,N}\,. 
+	\end{equation}
+	Dwa układy są w równowadze mechanicznej, jeśli mają takie samo ciśnienie.
+	\item Trzecią taką, choć mniej znaną, wielkością jest potencjał chemiczny, który określa tendencję układu do przyjmowania lub oddawania cząstek i może być opisany równaniem:
+	\begin{equation}
+	\mu = -T \left( \frac{\partial S}{\partial N} \right)_{U,V}\,. 
+	\end{equation}
+	Dwa układy są w równowadze dyfuzyjnej, jeśli mają taki sam potencjał chemiczny.
+\end{itemize}
+Potencjał bariochemiczny można zdefiniować podobnie jak potencjał chemiczny, używając zamiast liczby cząstek $N$, liczby barionowej $\Delta N = N_B - N_{\overline{B}}$, gdzie $N_B$ - jest liczbą barionów, zaś $N_{\overline{B}}$ - liczbą antybarionów. Ponieważ gęstość czy też koncentracja cząstek jest bezpośrednio związana z dyfuzją, dlatego wymiennie na diagramie fazowym QCD bywa przedstawiany zarówno potencjał bariochemiczny, jak i gęstość barionowa.
+
+\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=0.6\textwidth]{img/phase-diag-qcd3-ab_.png}
+	\vspace{-0.1in}
+		\caption{  W oparciu o: A. Bzdak, wystąpienie na konferencji XXV Cracow EPIPHANY Conference on Advances in Heavy Ion Physics. Kraków 2019 } \label{fig:qcd-diag-ab}
+	\end{center}
+\end{figure}
+
+Zatem, poruszając się blisko osi pionowej i wzdłuż niej, osiągamy bardzo wysokie temperatury i mamy małą liczbę barionową, czyli osiągamy warunki wczesnego Wszechświata, bowiem wtedy liczba barionów była równa liczbie antybarionów. Natomiast poruszając się blisko osi poziomej i wzdłuż niej, osiągamy bardzo duże gęstości i warunki gwiazdy neutronowej.
+
+Przy użyciu Lattice QCD, odkryto, że dla dużej energii określonej przez temperaturę około $T_c = 155~\text{MeV}$ \cite{Andronic:2017pug} {\color{blue}[lepsze referencje?]}, zachodzi ciągłe i gładkie, aczkolwiek dość gwałtowne przejście pomiędzy stanem związanym i niezwiązanym (wolnym). Oprócz tego wiadomo, że przy większym potencjale bariochemicznym i relatywnie małych temperaturach zachodzi przejście fazowe pomiędzy gazem i cieczą hadronową. {\color{blue} [mógłby Pan coś o tym trochę opowiedzieć?; jakieś referencje?]} Wiele efektywnych modeli przewiduje ponadto ostre przejście fazowe (z linią przemiany fazowej) pomiędzy hadronami i plazmą kwarkowo-gluonową zakończone punktem krytycznym. 
+
+Naturalnie, wiele prowadzonych obecnie badań ma na celu badanie diagramu fazowego QCD i w szczególności próby odkrycia wspomnianej linii przemiany fazowej. Zazwyczaj opierają się one na relatywistycznych zderzeniach ciężkich jonów i analizowaniu różnych wielkości fizycznych mierzonych lub obliczanych na podstawie danych z takich eksperymentów. 
+
+\subsection{Eksperymenty na RHIC}
+\paragraph{}
+Różne eksperymenty polegające na zderzeniach ciężkich jonów i ich parametry pozwalają na eksplorację różnych obszarów diagramu fazowego QCD. Na LHC w eksperymencie ALICE, a także ATLAS otrzymywane są bardzo duże temperatury, bowiem zachodzą one przy energii kilku TeV \footnote{chodzi o energię zderzenia na parę nukleon-nukleon w układzie środka masy oznaczaną zwykle przez  $\sqrt{s_{_{NN}}}$.}, ale potencjał bariochemiczny $\mu_B$ jest bliski 0 (badamy tylko obszar przestrzeni fazowej ograniczony np. do rapidity\footnote{zob. następny podrozdział.} $y \in [-0.5, 0.5]$, tzw. \textit{midrapidity}), ponieważ wysoka energia pozwala na produkcję bardzo wielu cząstek, ale zasada zachowania liczby barionowej wymusza produkcję takiej samej liczby barionów i antybarionów. Do rachunku wchodzą też bariony z pierwotnych, zderzających się jąder, jednak ich liczba, szczególnie w analizowanym zakresie $y$ jest niewielka w porównaniu do barionów wyprodukowanych. Takie warunki pozwalają zatem na badanie plazmy kwarkowo-gluonowej i warunków wczesnego Wszechświata.
+
+Z kolei już energia rzędu 7 GeV jest na tyle mała, że bardzo trudno o wyprodukowanie antybarionów. Jednakże na przykład w zderzeniach Au+Au początkowa liczba barionów jest bardzo duża. Dlatego takie zderzenia stanowią obszar w miarę niskiej temperatury i dużego potencjału bariochemicznego. Takie warunki mogą służyć do poznania własności materii gwiazd neutronowych.
+Gdzieś pomiędzy tymi skrajnymi punktami znajdzie się obszar aktywności budowanego eksperymentu FAIR w instytucie GSI w Niemczech (energie rzędu kilka-kilkadziesiąt GeV), zaś nadzieje co do niższych energii wiąże się z eksperymentem NICA w Dubnej, w Rosji.
+
+Prekursorem zderzeń ciężkich jonów było jednak laboratorium BNL w Stanach Zjednoczonych. Na zderzaczu RHIC przeprowadzono liczne badania przy zderzeniach o energii od 2.7 do 200 GeV, które wpisują się w obszar niższych temperatur i nieco większego potencjału bariochemicznego, niż te na LHC, ale wyższych $T$ i mniejszego $\mu_B$ niż FAIR.
+
+Badania omawiane w niniejszej pracy przeprowadzone zostały w oparciu o i z porównaniem wyników do pomiarów eksperymentalnych przeprowadzonych właśnie na RHIC. 
+
+RHIC jest całym łańcuchem urządzeń i akceleratorów cząstek, podobnie jak kompleks w CERN-ie \cite{rhic-website}. Ciężkie jony różnych pierwiastków chemicznych zaczynają swoją drogę w układzie zwanym Electron Beam Ion Source. Za pomocą wiązki elektronów, zachodzi tam jonizacja atomów. Tak powstałe jony, poprzez dwa małe akceleratory, trafiają do Boostera. Z kolei protony pochodzą z osobnego źródła i rozpędzane są w liniowym akceleratorze (Linac) o energii 200 MeV, zawierającym 9 przyspieszających komór (ang. \textit{cavities}) o częstotliwości radiowej na odcinku ok. 140 m. Booster jest synchrotronem służącym do dalszego wstępnego przyspieszania ciężkich jonów i protonów. Po opuszczeniu Boostera, jony mają szybkość około 37\% szybkości światła. Stamtąd trafiają do AGS (\textit{Alternating Gradient Synchrotron}). Tutaj, po dalszym przyspieszeniu, osiągają szybkość około 99.7\% szybkości światła, czyli energię około 13 GeV na nukleon. Wiązka cząstek jest w AGS skupiona zarówno w kierunku poziomym, jak i pionowym. Wreszcie, cząstki kierowane są linią transferową (\textit{AGS-to-RHIC Line}) w kierunku głównych ringów RHIC. Przed wejściem napotykają rozwidlenie, gdzie przełączający magnes kieruje je do ringu, w którym poruszają się zgodnie, albo przeciwnie do kierunku ruchu wskazówek zegara.
+
+Główne ringi RHIC, na których zlokalizowano interesujące nas eksperymenty, mają po około 3.9 km długości i 6 punktów przecięcia, gdzie może dochodzić do zderzeń przeciwbieżnych wiązek. Wokół tych punktów zbudowane są detektory, mierzące powstałe w zderzeniach cząstki. Detektory są bazą dla eksperymentów takich jak STAR, PHENIX czy PHOBOS. Ponieważ w pracy odnoszę się do wyników kolaboracji PHOBOS i PHENIX, omówię krótko te eksperymenty.
+
+Eksperyment PHOBOS składał się z wielu detektorów krzemowych otaczających miejsce zderzenia jako ośmiokątna ,,beczka'' pokrywająca pomiary w zakresie pseudorapidity $|\eta| \le 3.2$. Do tego dodano dwa zestawy po trzy liczniki krzemowe o kształcie pierścieni, pozwalające na pomiar obszarów daleko do przodu i do tyłu (\textit{forward and backward}) od obszaru zderzenia ($3.0 \le |\eta| \le 5.4$). Ponadto użyto dwóch zbiorów po 16 liczników scyntylacyjnych używanych w pierwotnym trygerze przypadków oraz dalszej selekcji przypadków. \cite{Back:2004mr} Pozwoliło to na zliczenie liczby wyprodukowanych cząstek i zbadanie ich rozkładu kątowego. Detektor umożliwiał także poszukiwania rzadkich i niezwykłych przypadków takich jak znaczące fluktuacje w badanych rozkładach. Ponadto, był wyposażony w 2 spektrometry magnetyczne wysokiej jakości, umożliwiające szczegółowe zbadanie 1\% cząstek. 
+
+Eksperyment PHENIX (\textit{the Pioneering High Energy Nuclear Interaction eXperiment}) jest detektorem zaprojektowanym specjalnie do badania zderzeń ciężkich jonów i protonów przy wysokich energiach, a jako jego główny cel podano odkrywanie i studiowanie plazmy kwarkowo-gluonowej. Umożliwia pomiar fotonów, elektronów, mionów oraz hadronów. Ponieważ fotony i leptony nie podlegają oddziaływaniom silnym, mogą ujawnić niezmienione właściwości np. o temperaturze zderzenia. Detektor PHENIX składa się z dwóch centralnych ramion spektrometrów, dwóch spektrometrów mionowych i zbioru detektorów \textit{forward} \cite{Adare:2015bua}. Do interesującyh nas pomiarów użyte były w szczególności komory dryfowe i wielodrutowe komory proporcjonalne. Tryger minimum-bias wykorzystuje parę liczników beam-beam (\textit{beam-beam counters (BBC)}), z których każdy składa się z 64 liczników Czerenkowa. Centralność zderzenia oceniana jest na podstawie energii zdeponowanej w kalorymetrach hadronowych położonych pod małym kątem od osi wiązki.
+
+\subsection{Rapidity, pseudorapidity, centralność}
+\paragraph{}
+Przydatne jest wprowadzenie wielkości fizycznych, które są używane w pomiarach w fizyce wysokich energii zderzeń ciężkich jonów.
+
+Pospieszność, częściej nazywana z ang. \textbf{\textit{rapidity}}, zdefiniowana jest wzorem: 
+\begin{equation} \label{eq:rapid} 
+y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right)\,,
+\end{equation}
+gdzie $E$ jest energią, $p_z$ jest pędem wzdłuż osi wiązki. Może być ona traktowana jako uogólnienie szybkości wzdłuż osi wiązki $\beta_z$. Jako że $\beta_z = p_z / E$, mamy bowiem:
+\begin{equation} \label{eq:rapid2}
+y = \frac{1}{2} \ln \left( \frac{1 + \beta_z}{1 - \beta_z} \right)\,. 
+\end{equation}
+Gdy $\beta_z \to 0$, to można zastosować przybliżenie (poprzez rozwinięcie w szereg Taylora):
+\begin{equation} \label{eq:rapid3}
+y \approx \frac{1}{2} \ 2\beta_z = \beta_z \,.
+\end{equation}
+
+Rozkład w funkcji rapidity jest kluczowym źródłem infoprmacji o własnościach produkcji cząstek w kierunku podłużnym. Gdy nie rozróżniamy cząstek, możemy odpowiednio skorzystać z pseudopospieszności (\textbf{\textit{pseudorapidity}}), bowiem ta ostatnia wielkość jest niezależna od masy, w przeciwieństwie do rapidity. Pseudorapidity definiuje się równaniem:
+\begin{equation} \label{eq:pseudorap}
+\eta = \frac{1}{2} \ln \left( \frac{p + p_z}{p - p_z} \right),
+\end{equation}
+gdzie $p$ jest całkowitym pędem.
+
+Jeśli $m = 0$, to $E = p$ (jest to też uprawnione w przybliżeniu, jeśli $p \gg m$, a więc przy bardzo dużych szybkościach) i wtedy
+\begin{equation} \label{eq:rap-pseudorap}
+ y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right) \approx \frac{1}{2} \ln \left( \frac{p + p_z}{p - p_z} \right) = \eta. 
+ \end{equation}
+ 
+Pseudorapidity zależy tylko od kąta względem osi wiązki, bowiem, wstawiając: $p_z = p \cos\theta$, mamy:
+\begin{equation} \label{eq:pseudo1}
+ \eta = \frac{1}{2} \ln \left( \frac{1 + \cos\theta}{1 - \cos\theta} \right) ,
+ \end{equation}
+gdzie $\theta$ jest kątem pomiędzy kierunkiem pędu cząstki a osią ($z$) wiązki. Ponadto, korzystając z tożsamości:
+\begin{equation} \label{eq:tansq}
+ \tan^2 \left( \frac{\alpha}{2}  \right) = \frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}\,,
+ \end{equation}
+otrzymujemy:
+\begin{equation} \label{eq:pseudorap2}
+\eta = - \ln \left( \tan \left( \frac{\theta}{2} \right) \right)\,.
+\end{equation}
+
+Używając tego równania, można zauważyć, że gdy $\theta \to 0$, czyli cząstka leci prawie wzdłuż osi wiązki, to $\eta \to + \infty$. Jeśli natomiast $\theta = \frac{\pi}{2}$ (cząstka leci prostopadle do osi), to$\eta = 0$.
+Zatem małe $|\eta|$ określa kierunki prostopadłe do osi wiązki, a im bliżej tejże, tym większe $|\eta|$.
+
+Ważnym pojęciem w tej pracy jest też \textbf{centralność} zderzenia. Ze względu na istotność rozmiarów jąder atomowych, rozróżnić należy zderzenia centralne, to znaczy takie, gdzie osie obu jąder niemal się pokrywają oraz peryferyczne, w których \textit{parametr zderzenia} jest na tyle duży, że jądra ledwie się musną; obszar przekrywania i oddziaływania będzie znacznie mniejszy. Wszystkie zderzenia można podzielić na klasy centralności. Przykładowo, klasa 0-10\% oznacza 10\% najbardziej centralnych zderzeń. W realnym eksperymencie niemożliwe jest wysterowanie, ani zmierzenie parametru zderzenia pojedynczego zderzenia pary ciężkich jonów. Dlatego, centralność określa się na podstawie ilości wyprodukowanych cząstek lub zdeponowanej energii, przyjmując rozsądne założenie, że wielkości te są tym większe, im bardziej centralne było zderzenie.
+
+
+\newpage
+\section{Modele i algorytmy}
+\paragraph{}
+W relatywistycznych zderzeniach ciężkich jonów mierzone są eksperymentalnie rozkłady krotności produkowanych cząstek naładowanych w funkcji pseudorapidity $dN_{ch}/d\eta$. Rozkłady takie otrzymuje się dla różnych zderzających się systemów - można wyróżnić zderzenia: mały jon + mały jon, np. proton + proton (Rys. 28. w \cite{Alver:2010ck}), mały jon + duży jon, np. deuter + złoto (Rys. 1. w \cite{Back:2004mr}) oraz duży jon + duży jon, np. złoto + złoto (Rys. 1. w \cite{Back:2002wb}). Podczas gdy np. zderzenia d+Au są przykładem zderzeń asymetrycznych, które badane były już w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}, to pozostałe dwie grupy zaliczają się do zderzeń symetrycznych, ponieważ zderzają się dwa takie same obiekty.
+
+Celem tej pracy była próba opisu zderzeń ciężkich jonów za pomocą relatywnie prostych modeli teoretycznych i sprawdzenie, czy opis taki daje wyniki zgodne z danymi pomiarowymi, a zatem wytłumaczenie wszystkich rozkładów otrzymanych eksperymentalnie. W szczególności tych symetrycznych, do których wcześniej nie stosowano omawianych niżej modeli.
+
+\subsection{Modele zranionych źródeł}
+\paragraph{}
+W pracy rozpatrywane są trzy modele: model zranionych nukleonów (ang. \textit{wounded nucleon model} (WNM)), model zranionych kwarków i dikwarków (ang. \textit{wounded quark-diquark model} (WQDM)) oraz model zranionych kwarków (ang. \textit{wounded quark model} (WQM)). 
+
+Pierwszy z tych modeli, model zranionych nukleonów, został zaproponowany już w artykule \cite{Bialas:1976ed}. W tym wypadku zderzenie jąder atomowych można rozpatrywać jako superpozycję wielu oddziaływań nukleon-nukleon. Każdy nukleon, który oddziałuje z co najmniej jednym innym nukleonem z drugiego jądra nazywamy \textit{zranionym}. Zgodnie z tym modelem, zakłada się, że każdy zraniony nukleon produkuje cząstki w sposób niezależny od tego, w ilu zderzeniach brał udział. Postulat taki można oprzeć na argumentacji prezentowanej np. w \cite{Bialas:2007eg}. Streszczając to rozumowanie, proces produkcji cząstek nie jest natychmiastowy. Jeżeli odległość punktu zderzenia od punktu produkcji cząstki jest większa od rozmiaru jądra, to emitowanie cząstek jest niezależne od liczby zderzeń nukleonu. Dzieje się tak, jeśli tylko rapidity powstających cząstek, mierzone w układzie laboratoryjnym, jest odpowiednio duże. Jak się okazuje, warunek ten spełniony jest praktycznie zawsze.
+
+W modelu zranionych kwarków \cite{Bialas:1977en}, stanowiącym modyfikację WNM, zderzenie ciężkich jonów traktujemy jako złożenie wielu zderzeń kwark-kwark. Dla każdego nukleonu bierzemy pod uwagę 3 kwarki walencyjne. Model jest analogiczny do WNM. 
+
+Natomiast w modelu zranionych kwarków i dikwarków \cite{Bialas:2007eg} podstawowymi obiektami podlegającymi interakcjom są, dla każdego nukleonu, kwark i dikwark, czyli jeden obiekt zastępujący 2 kwarki i mający masę równą sumie ich mas. Koncepcja dikwarka pozwala na wprowadzenie do modelu korelacji pomiędzy konstytuentnymi kwarkami poprzez łączenie dwóch z nich w jeden obiekt \cite{Bialas:2006qf}. Należy zauważyć, że w tym wypadku możliwe są oddziaływania: kwark-kwark, kwark-dikwark oraz dikwark-dikwark. Różnią się one przekrojami czynnymi, ale zakłada się, że zarówno zraniony kwark jak i dikwark produkują cząstki z takim samym prawdopodobieństwem.
+
+Jak to było już omawiane w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}, w każdym z tych modeli można zapisać równanie:
+\begin{equation} \label{eq:dnch-deta}
+\frac{dN_{ch}}{d\eta} = w_{L} F(\eta) + w_{R} F(-\eta),
+\end{equation}
+gdzie $F(\eta)$ jest funkcją emisji dla zranionego źródła (odpowiednio nukleonu, kwarku lub dikwarku w różnych modelach). Informuje ona o gęstości cząstek w funkcji pseudorapidity emitowanych przez jedno zranione źródło. Natomiast $w_{L}$ i $w_{R}$ są średnimi liczbami zranionych źródeł z jąder odpowiednio poruszających się w lewo oraz w prawo. Jeśli $w_{L} \neq w_{R}$, to można z równ. (\ref{eq:dnch-deta}) wyprowadzić wzór na funkcję emisji:
+\begin{equation} \label{eq:fragm-fun}
+F(\eta) = \frac{1}{2} \left[ \frac{N(\eta) + N(-\eta)}{w_{L} + w_{R}} + \frac{N(\eta) - N(-\eta)}{w_{L} - w_{R}} \right],
+\end{equation}
+gdzie dla prostoty wprowadzono oznaczenie $N(\eta) := dN_{ch}(\eta)/d\eta$.
+
+Gdy $w_{L} = w_{R}$, to można tylko wyznaczyć zsymetryzowaną funkcję emisji $F(\eta) + F(-\eta)$, bowiem drugi wyraz w równ. (\ref{eq:fragm-fun}) staje się nieokreślony. Dlatego funkcje emisji nie mogą być wyprowadzone w ten sposób dla symetrycznych, ani dla bardzo peryferycznych zderzeń.
+
+Potrzebny do wyznaczenia funkcji emisji rozkład $N(\eta)$ został wzięty z danych eksperymentalnych ze zderzeń d+Au przy energii $\sqrt{s_{_{NN}}} = 200~\text{GeV}$ otrzymanych przez kolaborację PHOBOS na BNL RHIC \cite{Back:2004mr}. Natomiast liczby zranionych źródeł odpowiednie dla każdego modelu otrzymane zostały w symulacji komputerowej Monte Carlo.
+
+\subsection{Algorytm symulacji komputerowej} \label{algorytm}
+\paragraph{}
+W celu wyznaczenia średnich liczb zranionych nukleonów, kwarków lub dikwarków, napisałem symulację komputerową Monte Carlo opartą na modelu Glaubera \cite{Loizides:2014vua} \footnote{Symulacja omawiana już była w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}, ale w obecnej pracy wprowadzone w niej zostały pewne, choć niewielkie, modyfikacje.}. Algorytm, według którego jest ona przeprowadzana można zapisać następująco:
+\begin{enumerate}
+	\item Dla każdego zderzenia jądro-jądro:
+	\begin{enumerate}
+		\item Wylosuj położenia nukleonów według odpowiednich rozkładów gęstości.
+		\item W WQM i WQDM, wylosuj ponadto położenia kwarków (i dikwarków) wokół środka nukleonu, na podstawie odpowiedniego rozkładu.
+		\item Wylosuj parametr zderzenia.
+		\item Dla każdej pary nukleon-nukleon albo kwark-kwark albo każdej z par: kwark-kwark, kwark-dikwark, dikwark-dikwark, sprawdź, czy zaszło oddziaływanie.
+		\item Dla każdego zranionego konstytuentu wylosuj liczbę wyprodukowanych cząstek.
+	\end{enumerate}
+	\item Podziel wszystkie zderzenia na klasy centralności na podstawie krotności cząstek wyprodukwoanych w poszczególnych zderzeniach.
+	\item Oblicz średnie liczby zranionych konstytuentów w klasach centralności.
+\end{enumerate}
+
+Omówię teraz szczegóły poszczególnych kroków.
+
+\paragraph{Położenia nukleonów.}
+Położenia nukleonów wokół środka jądra losowane są z rozkładów gęstości materii jądrowej. W przypadku deuteru, położenie protonu losowane jest z rozkładu Hulthena:
+\begin{equation}
+\rho(\vec{r})=\rho_0 \left(\frac{e^{-Ar}+e^{-Br}}{r}\right)^2,
+\end{equation}
+gdzie $r$ jest odległością od środka jądra, zaś parametry $A=0.457$ fm$^{-1}$, $B=2.35$ fm$^{-1}$. Natomiast neutron jest umiejscawiany symetrycznie względem środka jądra \cite{hulthen,Loizides:2014vua}. Dla helu-3 współrzędne nukleonów brane są na podstawie \cite{Carlson:1997qn}. Natomiast dla złota i miedzi stosuje się rozkład Woodsa-Saxona:
+\begin{equation}
+\rho(\vec{r})=\rho_0 \left( 1 + \exp \left( \frac{r - R}{a}\right)\right)^{-1},
+\end{equation}
+gdzie $R$ jest promieniem jądra, zaś $a$ to z ang. \textit{skin depth}.
+
+\paragraph{Jądra zdeformowane.}
+Biorące udział w zderzeniach badanych w tej pracy, jądra glinu Al-27 i uranu U-238 są zaliczane do jąder zdeformowanych, to znaczy nie mają symetrii sferycznej i opisane są uogólnioną wersją rozkładu Woodsa-Saxona:
+
+\begin{equation}
+\rho(\vec{r})=\rho_0\left({1+\exp\left(\frac{r-R(1+\beta_2Y_{20}+\beta_4Y_{40}}{a}\right)}\right)^{-1}\,,
+\end{equation}
+gdzie $Y_{20}=\sqrt{ 5\over{16\pi}}(3\cos^{2}\theta-1)$, $Y_{40}={ 3\over {16\sqrt{\pi}}}(35\cos^{4}\theta-30\cos^{2}\theta+3)$ są harmonikami sferycznymi. Wartości wszystkich parametrów dla jąder glinu, miedzi, złota i uranu są podane w Tab. \ref{table0}  \cite{Loizides:2014vua,DeJager:1987qc}.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} \hline
+ & $a~[\mathrm{fm}]$ & $R~[\mathrm{fm}]$ & $\beta_2$ & $\beta_4$ \\ \hline
+$^{27 }\!$Al     & 0.580 & 3.34 & -0.448 & 0.239 \\ \hline
+$^{63 }  $Cu     & 0.596 & 4.20 &  0     &  0    \\ \hline
+$^{197}\!$Au     & 0.535 & 6.38 &  0     &  0    \\ \hline
+$^{238}  $U$~~$  & 0.440 & 6.67 & ~0.280 & 0.093 \\ \hline
+\end{tabular}
+\caption{\label{table0} 
+Parametry użyte do obliczenia rozkładu Woodsa-Saxona dla różnych jąder.}
+\end{center}
+\end{table}
+
+\paragraph{Położenia kwarków w WQM.}
+W modelu zranionych kwarków, położenia trzech kwarków konstytuentnych (walencyjnych) dla każdego nukleonu losowane są z rozkładu
+\begin{equation}\label{eq:eq-quark-distr}
+\rho(\vec{r})=\rho_0\exp\left(-\frac{Cr}{a}\right)\,,
+\end{equation}
+gdzie $a={r_p}/{\sqrt{12}}$, $r_p=0.81~\mathrm{fm}$ jest promieniem protonu, zaś $C=0.82$ jest współczynnikiem korekcyjnym. Idealnie byłoby mieć położenia kwarków wylosowane z rozkładu o $C=1$ \cite{Adler:2013aqf,Hofstadter:1956qs}, ale w symulacji dla każdego nukleonu jego kwarki przesuwane są tak, aby ich środek masy pokrywał się ze środkiem nukleonu. Ta operacja zaburza rozkład kwarków, a współczynnik $C$ ma za zadanie dokonać takiej korekty, aby średnia kwadratów odległości kwarków od środka nukleonu $\langle r^2 \rangle$  = $r_p^2$. Wartość parametru $C$ została otrzymana metodą prób i błędów. Było to również omówione w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}.
+
+\paragraph{Położenia kwarków i dikwarków w WQDM.}
+W modelu zranionych kwarków i dikwarków, zakłada się, że dikwark grupuje w sobie masę dwa razy większą niż kwark. Położenie $\vec{r}$ kwarku losowane było z rozkładu (\ref{eq:eq-quark-distr}), zaś dikwark umiejscawiano w położeniu $-\vec{r}/2$, dzięki czemu środek masy układu kwark-dikwark znajdował się w środku nukleonu. W tym wypadku wartość parametru $C=0.79$ została również wyznaczona metodą prób i błędów, także przy warunku $\langle r^2 \rangle$  = $r_p^2$. Należy dodać, że zarówno ten warunek jak i wartość parametru $C$ w WQDM może być wyznaczona analitycznie. Przedstawiam to w Dodatku \ref{appendix-proof-C-and-rms}.
+
+\paragraph{Parametr zderzenia.}
+Ponieważ w obecnie eksperymentalnie przeprowadzanych relatywistycznych zderzeniach ciężkich jonów nie da się zadbać o wartość parametru zderzenia, można go uważać za losowy. Tak jak omawiano to w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}, $b^2$ losujemy z rozkładu jednorodnego na przedziale $[0, b_{max}^2]$, gdzie $b$ jest parametrem zderzenia, natomiast $b_{max}$ jest na tyle dużą odległością, że prawdopodobieństwo zderzenia jąder jest praktycznie równe 0. $b_{max}$ wyznaczono dla różnych zderzających się systemów w symulacji, otrzymując wartości takie jak podano w Tab. \ref{table:b-max}.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+system & p+p & p+Al & p+Au & d+Au & $^3$He+Au & Cu+Cu & Cu+Au & Au+Au & U+U \\ \hline
+$b_{max}$ [fm] & 5 & 9 & 15 & 15 & 15 & 15 & 18 & 18 & 20  \\ \hline
+\end{tabular}
+\caption{\label{table:b-max} 
+Górne ograniczenia $b_{max}$ na losowany parametr zderzenia dla różnych zderzających się systemów.}
+\end{center}
+\end{table}
+
+\paragraph{Sprawdzenie, czy zaszło zderzenie.}
+Dla każdego fundamentalnego obiektu z jednego jądra biorącego udziała w zderzeniu - nukleonu, kwarku albo kwarku lub dikwarku, odpowiednio w modelach WNM, WQM oraz WQDM - iterowano po wszystkich takich obiektach z drugiego jądra. Dla każdej pary sprawdzano, czy zaszło zderzenie. W poprzedniej pracy (zob. \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}), założono, że istnieje sztywna granica, do której zawsze dochodzi do oddziaływania, a po przekroczeniu której nie dochodzi do niego nigdy. Zostało to opisane za pomocą funkcji Heaviside'a. Teraz natomiast przyjęto model rozmytego prawdopodobieństwa zajścia interakcji, opisując je rozkładem normalnym \footnote{Sprawdzono, że wyniki różnią się nieznacznie.}. Mianowicie, sprawdzano, czy transwersalny dystans $d_T$ pomiędzy rozpatrywanymi dwoma cząstkami oraz zmienna losowa $u$ z rozkładu jednostajnego na przedziale [0, 1] spełniają warunek 
+\begin{equation}
+u < \exp\left(-\frac{d_T^2}{2\gamma^2}\right)\,,
+\end{equation}
+gdzie $\gamma^2 = \sigma/(2\pi)$, zaś $\sigma$ jest odpowiednim nieelastycznym przekrojem czynnym. Dla analizowanej energii zderzenia na parę nukleon-nukleon: $\sqrt{s_{_{NN}}} = 200~\text{GeV}$ przyjęto nieelastyczny przekrój czynny w oddziaływaniach nukleon-nukleon $\sigma_{nn} = 41~\text{mb}$ \cite{Loizides:2014vua}. 
+
+W WQM przekrój czynny na nieelastyczne oddziaływania kwark-kwark wyznaczono metodą prób i błędów, poszukując takiego $\sigma_{qq}$, dla którego spełnione będzie: $ \sigma_{nn} = \int_{0}^{2 \pi} d\varphi \int_{0}^{+ \infty}\:dd_T\,d_T P(d_T; \sigma_{qq})$, gdzie $P(d_T; \sigma_{qq})$ jest prawdopodobieństwem nieelastycznego zderzenia nukleon-nukleon (zob. szczegóły w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}). Otrzymano $\sigma_{qq} = 6.65~\text{mb}$.
+
+Natomiast w WQDM, należy rozróżnić zderzenia kwark-kwark, kwark-dikwark i dikwark-dikwark. Przyjęto, że odpowiadające im przekroje czynne spełniają proporcję: $\sigma'_{\text{qq}}:\sigma_{\text{qd}}:\sigma_{\text{dd}}=1:2:4$ \cite{	Bialas:2006kw}. Postępując analogicznie, jak w modelu WQM, otrzymano $\sigma'_{\text{qq}} = 5.75~\text{mb}$.
+
+\paragraph{Liczba produkowanych cząste.}
+Podobnie jak w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}, w WNM przyjęto, że każdy zraniony nukleon emituje naładowane cząstki niezależnie od liczby zderzeń, którym uległ. Liczba cząstek losowana jest według ujemnego rozkładu dwumianowego (ang. \textit{negative binomial distribution (NBD)}) ze średnią $\langle n \rangle = 5$ oraz $k = 1$ oznaczającym odchylenie od rozkładu Poissona. Analogiczne założenia stosują się do pozostałych modeli \footnote{W WQDM przy produkcji cząstek nie ma rozróżnienia między zranionym kwarkiem i zranionym dikwarkiem.} . Przy czym w przypadku modeli WQM i WQDM wartości tych parametrów należało podzielić przez średnie liczby zranionych konstytuentów przypadających na jeden zraniony nukleon, tzn. przez 1.27 i 1.14 odpowiednio w WQM i WQDM. Wartości te wyznaczone zostały w symulacji zderzeń p+p.
+
+\paragraph{Podział przypadków na klasy centralności.}
+Chociaż parametr zderzenia najlepiej określa centralność zderzenia, w tej pracy (podobnie jak w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}) podzielono przypadki na klasy centralności na podstawie liczby (krotności) wyprodukowanych cząstek naładowanych, ponieważ tak definiuje się centralność w eksperymentach, w których nie da się wszak zmierzyć bezpośrednio parametru zderzenia. W niniejszej pracy dokonano porównania wyników symulacji z danymi eksperymentalnymi otrzymanymi przez kolaboracje PHENIX oraz PHOBOS na RHIC i dlatego dobrano takie klasy centralności, na jakie swe rezultaty podzieliły te kolaboracje.
+
+\paragraph{Średnie liczby zranionych konstytuentów.}
+W każdym modelu i dla każdej rozpatrywanej klasy centralności niezależnie wyznaczone zostały średnie liczby zranionych konstytuentów (odpowiednio nukleonów, kwarków albo kwarków i dikwarków). Wartości uzyskane dla symulacji zderzeń d+Au użyto do wyznaczenia funkcji emisji na podstawie równ. (\ref{eq:fragm-fun}). Natomiast średnie liczby zranionych konstytuentów dla wszelkich zderzających się systemów były konieczne so wyznaczenia przewidywanych rozkładów krotności $dN_{ch}/d\eta$ według równ. (\ref{eq:dnch-deta}).
+
+
+\newpage
+\section{Wyniki}
+\paragraph{}
+Najpierw na podstawie równ. (\ref{eq:fragm-fun}), wyznaczono funkcje emisji, korzystając z rozkładu krotności cząstek naładowanych w funkcji pseudorapidity, $dN_{ch}/d\eta$, zmierzonego w zderzeniach d+Au przy energii 200~GeV w eksperymencie PHOBOS \cite{Back:2004mr} oraz średnich liczb zranionych konstytuentów otrzymanych w symulacji dla tych zderzeń. Mając gotową funkcję emisji, i przyjmując ją jako uniwersalną, przy określonej energii, możliwe stało się wyznaczenie rozkładów $dN_{ch}/d\eta$ na podstawie równ. (\ref{eq:dnch-deta}) dla różnych zderzających się systemów oraz różnych centralności. W ten sposób przewidziane teoretycznie rozkłady, otrzymane w symulacji w oparciu o każdy z dyskutowanych trzech modeli (WNM, WQM, WQDM), zostały zestawione z wynikami pomiarowymi eksperymentów PHOBOS i PHENIX, celem weryfikacji modeli.
+
+
+\subsection{Funkcje emisji} \label{fkcje-emisji}
+\paragraph{}
+W tej pracy, do punktów eksperymentalnych d+Au PHOBOS \cite{Back:2004mr} dopasowano analityczne funkcje opisujące rozkłady krotności. Szczegóły przedstawione są w Dodatku \ref{fity}. Funkcje emisji wyznaczono w oparciu o te dopasowane wartości. Należy dodać, że zakres pseudorapidity został ograniczony do przedziału $|\eta| \le 3$, ponieważ poza tym przedziałem zaczynają mieć istotny wkład zjawiska nieuwzględniane w podstawowej wersji modeli zranionych konstytuentów takie jak np. produkcja cząstek przez niezranione kwarki znajdujące się w zranionych nukleonach. Objawia się to także ujemnymi wartościami $F(\eta)$ dla $\eta > 3$, co jest niefizycznym wynikiem (por. \cite{Bialas:2006kw}, \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}).
+
+Funkcje emisji dla modeli zranionych nukleonów oraz zranionych kwarków były już prezentowane w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}. Wówczas pokazano, że funkcja emisji dla zranionych kwarków ma bardziej uniwersalny kształt w różnych klasach centralności niż funkcja emisji dla zranionych nukleonów. 
+
+
+W Tab. \ref{table:d-Au0} zaprezentowano średnie liczby zranionych konstytuentów w zderzeniach d+Au otrzymane w symulacji metodą Monte Carlo Glaubera w każdym z trzech modeli. Naturalnie, za najbardziej reprezentatywną uchodzić może funkcja emisji wyznaczona dla tzw. \textit{minimum bias}, czyli przedziału obejmującego wszystkie centralności. Funkcje emisji dla każdego modelu dla \textit{minimum bias} zaprezentowano na rys. \ref{fig:F0}a).
+
+Pierwszej weryfikacji dokonano rekonstruując rozkłady $N(\eta)$, które służyły do wyznaczenia funkcji emisji (rys. \ref{fig:F0}b) ). Jednak należy podkreślić, że odtworzono z zadowalajacą dokładnością rozkłady w różnych centralnościach, korzystając - w obrębie danego modelu - zawsze z tej samej funkcji emisji. Rozkłady otrzymane dla różnych modeli praktycznie pokrywają się ze sobą.
+
+
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|} \hline
+ & min-bias & 0-20\% & 20-40\% & 40-60\% & 60-80\% \\ \hline
+WNM  & 1.60, 6.56 & 1.97, 13.59 & 1.86,  8.96 & 1.65, 5.49 & 1.36, 2.90 \\ \hline
+WQDM & 2.65, 7.67 & 3.80, 16.15 & 3.39, 10.52 & 2.74, 6.40 & 1.95, 3.33 \\ \hline
+WQM  & 3.68, 8.70 & 5.63, 18.48 & 4.89, 11.94 & 3.78, 7.25 & 2.49, 3.66 \\ \hline
+\end{tabular}
+\caption{Średnie liczby zranionych konstytuentów w trzech modelach dla różnych klas centralności w zderzeniach d+$^{197}$Au przy energii $\sqrt{s_{_{NN}}} = 200~\text{GeV}$. Lewe i prawe liczby oznaczają odpowiednio deuter i złoto.}\label{table:d-Au0}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+\begin{center}
+\subfloat{{\includegraphics[scale=0.30]{img/F1.pdf}}}%
+\hspace{0.3cm}
+\subfloat{{\includegraphics[scale=0.30]{img/N_d-Au.pdf}}}%
+\caption{(a) Funkcje emisji zranionego konstytuentu dla \textit{minimum bias} przy $\sqrt{s_{_{NN}}}=200$~GeV w modelach WNM, WQDM i WQDM. (b) Rozkłady krotności cząstek naładowanych $N(\eta)\equiv dN_{ch}/d\eta$ jako funkcji pseudorapidity dla zderzeń d+$^{197}$Au, zrekonstruowane przy pomocy tych funkcji emisji. Czarne punkty przedstawiają wyniki pomiaru PHOBOS, linie reprezentują wyniki symulacji, natomiast słupki i zacieniowane obszary odpowiadają niepewnościom.}\label{fig:F0}
+\end{center}
+\end{figure}
+
+\subsection{Zderzenia asymetryczne}
+Kolejnym etapem było zastosowanie otrzymanych funkcji emisji do przewidzenia rozkładów $N(\eta)$ dla innych zderzających się systemów asymetrycznych, tzn. p+Al, p+Au, d+Au (w innych centralnościach) i $^3$He+Au. Wstępne przewidywania dla p+Au i $^3$He+Au prezentowane były już w \cite{Barej:pracaInz18} i \cite{Barej:2017kcw}. Natomiast tym razem zostały zaprezentowano też dodatkowe układy i porównano je z najnowszymi wynikami eksperymentalnymi otrzymanymi na RHIC przez kolaborację PHENIX \cite{Adare:2018toe}.
+
+W tabelach \Crefrange{table:p-Al}{table:he-Au} prezentowane są średnie liczby zranionych konstytuentów w różnych centralnościach w omawianych zderzeniach otrzymane w symulacji. Klasy centralności zostały dobrane do podziału zastosowanego przez PHENIX.
+
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|} \hline
+ & min-bias & 0-5\% & 5-10\% & 10-20\% & 20-40\% & 40-72\% \\ \hline
+WNM  & 1.00, 1.96 & 1.00, 3.85 & 1.00, 3.10 & 1.00, 2.66 & 1.00, 2.17 & 1.00, 1.67 \\ \hline
+WQDM & 1.40, 2.25 & 1.85, 4.77 & 1.76, 3.81 & 1.67, 3.23 & 1.53, 2.55 & 1.31, 1.83 \\ \hline
+WQM  & 1.76, 2.51 & 2.68, 5.61 & 2.51, 4.49 & 2.33, 3.78 & 2.03, 2.92 & 1.60, 1.99 \\ \hline
+\end{tabular}
+\caption{Średnie liczby zranionych nukleonów, kwarków i dikwarków oraz kwarków (odpowiednio w trzech modelach) dla różnych klas centralności w zderzeniach p+$^{27}$Al przy $\sqrt{s_{_{NN}}} = 200~\text{GeV}$. Lewe i prawe wartości w każdej komórce dotyczą odpowiednio protonu i glinu.}\label{table:p-Al}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+ & min-bias & 0-5\% & 5-10\% & 10-20\% & 20-40\% & 40-60\% & 60-84\% \\ \hline
+WNM  & 1.00, 4.47 & 1.00, 10.07 & 1.00, 8.52 & 1.00, 7.35 & 1.00, 5.68 & 1.00, 3.93 & 1.00, 2.44 \\ \hline
+WQDM & 1.66, 5.11 & 1.99, 11.84 & 1.98, 9.93 & 1.95, 8.51 & 1.89, 6.59 & 1.75, 4.57 & 1.46, 2.69 \\ \hline
+WQM  & 2.30, 5.68 & 2.98, 13.40 & 2.95, 11.13 & 2.90, 9.55 & 2.77, 7.39 & 2.47, 5.08 & 1.87, 2.87 \\ \hline
+\end{tabular}
+\caption{Tak samo jak w Tab. \ref{table:p-Al}, ale dla zderzeń p+$^{197}$Au.}\label{table:p-Au}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+ & min-bias & 0-5\% & 5-10\% & 10-20\% & 20-40\% & 40-60\% & 60-88\% \\ \hline
+WNM  & 1.59, 6.56 & 1.99, 16.48 & 1.98, 13.96 & 1.95, 11.97 & 1.86, 8.96 & 1.65, 5.49 & 1.31, 2.62 \\ \hline
+WQDM & 2.65, 7.67 & 3.92, 19.75 & 3.84, 16.55 & 3.72, 14.13 & 3.39, 10.52 & 2.74, 6.40 & 1.81, 2.93 \\ \hline
+WQM  & 3.68, 8.70 & 5.85, 22.68 & 5.71, 18.96 & 5.49, 16.15 & 4.89, 11.94 & 3.78, 7.25 & 2.27, 3.23 \\ \hline
+\end{tabular}
+\caption{Tak samo jak w Tab. \ref{table:p-Al}, ale dla zderzeń d+$^{197}$Au.}\label{table:d-Au}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+ & min-bias & 0-5\% & 5-10\% & 10-20\% & 20-40\% & 40-60\% & 60-88\% \\ \hline
+WNM  & 2.30, 8.27 & 2.99, 21.46 & 2.98, 18.32 & 2.96, 15.82 & 2.86, 11.75 & 2.51, 6.78 & 1.72, 2.80 \\ \hline
+WQDM & 3.82, 9.98 & 5.88, 26.59 & 5.79, 22.49 & 5.65, 19.31 & 5.21, 14.23 & 4.07, 8.07 & 2.29, 3.20 \\ \hline
+WQM  & 5.30, 11.58 & 8.79, 31.21 & 8.61, 26.35 & 8.35, 22.56 & 7.52, 16.57 & 5.54, 9.30 & 2.81, 3.57 \\ \hline
+\end{tabular}
+\caption{Tak samo jak w Tab. \ref{table:p-Al}, ale dla zderzeń $^3$He+$^{197}$Au.}\label{table:he-Au}
+\end{table}
+
+Rozkłady krotności otrzymane w oparciu o te liczby zranionych konstytuentów i funkcje emisji z rys. \ref{fig:F0}(a) prezentowane są na \Crefrange{fig:p-Al}{fig:He-Au}. Krzywe zostały zestawione z wynikami eksperymentalnymi PHENIX otrzymanymi w wybranych zakresach pseudorapidity. Wszystkie trzy modele dają praktycznie jednakowe przewidywania. Dla wszystkich asymetrycznych systemów otrzymano dobrą zgodność z eksperymentem, przy czym największe rozbieżności pojawiły się dla przypadku $^3$He+$^{197}$Au \footnote{Może być to spowodowane specyfiką układu nukleonów w helu-3 i użyciem tu ograniczonej liczby ich konfiguracji pochodzącej z \cite{Carlson:1997qn}, a nie losowaniem ich z rozkładu statystycznego (jak dla pozostałych jąder).}. Należy podkreślić, że przewidywania otrzymane przez moich współpracowników i przeze mnie dla tych systemów otrzymane w modelu zranionych kwarków zostały już pozytywnie zweryfikowane przez kolaborację PHENIX \cite{Adare:2018toe}, gdzie skupiono się głównie na \textit{kształcie} rozkładów.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_p-Al.pdf}
+\caption{Rozkłady krotności naładowanych cząstek $N(\eta)$ jako funkcje pseudorapidity w modelu zranionych nukleonów (WNM), modelu zranionych kwarków i dikwarków (WQDM) i modelu zranionych kwarków (WQM) dla różnych centralności zderzeń p+$^{27}$Al przy $\sqrt{s_{_{NN}}}=200$~GeV. Kropki reprezentują dane eksperymentalne PHENIX \cite{Adare:2018toe}. Niepewności zaznaczone zostały jako słupki dla symulacji oraz jako zacieniowane obszary dla eksperymentu. Pomiary zostały wykonane tylko w ograniczonych zakresach $\eta$.\label{fig:p-Al} }
+\end{center}
+\end{figure}
+% \vspace{2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_p-Au.pdf}
+\caption{Tak samo jak na Rys. \ref{fig:p-Al}, ale dla zderzeń p+$^{197}$Au.\label{fig:p-Au}}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_D-Au.pdf}
+\caption{Tak samo jak na Rys. \ref{fig:p-Al}, ale dla zderzeń d+$^{197}$Au.\label{fig:d-Au}}
+\end{center}
+\end{figure}
+\vspace{2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_He-Au.pdf}
+\caption{Tak samo jak na Rys. \ref{fig:p-Al}, ale dla zderzeń $^3$He+$^{197}$Au.\label{fig:He-Au}}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Zderzenia symetryczne dużych systemów}
+\paragraph{}
+Następnie użyto tych samych funkcji emisji dla \textit{minimum bias} (Rys. \ref{fig:F0}(a)), aby odtworzyć rozkłady dla symetrycznych zderzeń $^{63}$Cu+$^{63}$Cu i $^{197}$Au+$^{197}$Au. Średnie liczby zranionych konstytuentów we wszystkich trzech modelach zaprezentowano w \Crefrange{table:Cu-Cu}{table:Au-Au}.
+
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+ & min-bias & 0-6\% & 6-15\% & 15-25\% & 25-35\% & 35-45\% & 45-55\% \\ \hline
+WNM  & 16.2 & 51.6 & 42.2 & 31.2 & 22.0 & 15.0 & 9.9 \\ \hline
+WQDM & 24.7 & 87.1 & 67.7 & 48.1 & 32.5 & 21.4 & 13.5 \\ \hline
+WQM  & 32.5 & 121.0 & 91.6 & 63.2 & 41.8 & 26.7 & 16.5 \\ \hline
+\end{tabular}
+\caption{Średnie liczby zranionych konstytuentów (odpowiednio w trzech modelach) na jedno jądro dla różnych klas centralności w zderzeniach $^{63}$Cu+$^{63}$Cu przy $\sqrt{s_{_{NN}}} = 200~\text{GeV}$.}\label{table:Cu-Cu}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+ & min-bias & 0-6\% & 6-15\% & 15-25\% & 25-35\% & 35-45\% & 45-55\% \\ \hline
+WNM  & 50.2 & 172.7 & 136.3 & 98.6 & 68.9 & 46.1 & 29.1 \\ \hline
+WQDM & 83.6 & 313.1 & 237.5 & 165.4 & 110.4 & 71.1 & 42.9 \\ \hline
+WQM  & 115.7 & 449.1 & 334.1 & 229.8 & 151.4 & 95.0 & 55.7 \\ \hline
+\end{tabular}
+\caption{Tak samo jak Tab. \ref{table:Cu-Cu}, ale dla zderzeń $^{197}$Au+$^{197}$Au.}\label{table:Au-Au}
+\end{table}
+
+Przewidywane rozkłady krotności cząstek naładowanych w funkcji $\eta$ dla różnych centralności zostały przedstawione w porównaniu z danymi PHOBOS \cite{Alver:2007aa, Back:2002wb} na \Crefrange{fig:Cu-Cu}{fig:Au-Au}. W tym wypadku wyniki bazujące na trzech omawianych modelach różnią się znacząco. Wyniki modelu WQM i WQDM są zgodne z danymi pomiarowymi w ramach niepewności. Natomiast wyniki modelu zranionych nukleonów zdecydowanie okazują się niepoprawne. Można zauważyć, że różnice pomiędzy modelami maleją w miarę przejścia od zderzeń centralnych do bardziej peryferycznych. Wszystkie rozkłady zachowują podobny kształt krzywej.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_Cu-Cu.pdf}
+\caption{Tak samo jak Rys. \ref{fig:p-Al}, ale dla zderzeń $^{63}$Cu+$^{63}$Cu, zaś kropki oznaczają teraz dane PHOBOS \cite{Alver:2007aa} otrzymane już na całym badanym przedziale $\eta$.}\label{fig:Cu-Cu}
+\end{center}
+\end{figure}
+\vspace{2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_Au-Au.pdf}
+\caption{Tak samo jak Rys. \ref{fig:Cu-Cu}, ale dla zderzeń $^{197}$Au+$^{197}$Au, zaś kropki oznaczają teraz dane PHOBOS \cite{Back:2002wb}.}\label{fig:Au-Au}
+\end{center}
+\end{figure}
+
+\subsection{Zderzenia symetryczne małych systemów (p+p)}
+\paragraph{}
+Kolejnym badanym typem zderzenia było zderzenie proton-proton przy tej samej energii $\sqrt{s_{_{NN}}} = 200~\text{GeV}$. Jako że proton jest małym obiektem, nie dokonano w tym przypadku podziału na klasy centralności. W modelu WQDM otrzymano średnio 1.14 zranionych konstytuentów na jeden proton, natomiast w WQM - 1.27 zranionych kwarków na proton. Na Rys. \ref{fig:p-p}. przedstawiono otrzymane tak jak poprzednio rozkłady $N(\eta)$ w porównaniu z danymi PHOBOS \cite{Alver:2010ck}. Wykres pokazuje, że najlepszy jest wynik modelu zranionych nukleonów, jednakże wszystkie modele, w granicach niepewności, są zgodne z danymi.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_p-p.pdf}
+\caption{Tak samo jak na Rys. \ref{fig:p-Al}, ale dla zderzeń p+p minimum bias. Kropki oznaczają dane PHOBOS \cite{Alver:2010ck} otrzymane już na całym badanym przedziale $\eta$.}\label{fig:p-p}
+\end{center}
+\end{figure}
+
+\subsection{Ograniczone dane}
+\paragraph{}
+Dokonano także analogicznych symulacji i obliczeń dla zderzeń układów $^{63}$Cu+$^{197}$Au oraz $^{238}$U+$^{238}$U przy tej samej energii. Średnie liczby zranionych konstytuentów otrzymane we wszystkich trzech modelach w wybranych przedziałach centralności przedstawiono w \Crefrange{table:Cu-Au}{table:U-U}.
+
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+& min-bias & 0-5\% & 5-10\% & 15-20\% & 25-30\% & 35-40\% & 45-50\% \\ \hline
+WNM  & 22.1, 34.9 & 61.1, 127.5 & 57.8, 106.5 & 47.2, 73.7 & 35.4, 50.6 & 25.1, 33.8 & 16.7, 21.6 \\ \hline
+WQDM & 36.4, 52.6 & 115.6, 205.9 & 105.5, 168.9 & 80.5, 114.2 & 56.9, 75.1 & 38.0, 47.9 & 24.1, 29.4 \\ \hline
+WQM  & 50.7, 69.9 & 169.3, 278.6 & 152.2, 228.5 & 112.9, 152.3 & 78.2, 99.4 & 51.3, 62.7 & 31.7, 37.6 \\ \hline
+\end{tabular}
+\caption{Tak samo jak Tab. \ref{table:p-Al}, ale dla zderzeń $^{63}$Cu+$^{197}$Au.}\label{table:Cu-Au}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|} \hline
+& min-bias & 0-5\% & 5-10\% & 15-20\% & 25-30\% & 35-40\% & 45-50\% \\ \hline
+WNM  & 62.0 & 211.5 & 182.1 & 131.6 & 93.6 & 64.3 & 42.0 \\ \hline
+WQDM & 104.5 & 389.1 & 324.8 & 225.2 & 154.6 & 102.0 & 63.7 \\ \hline
+WQM  & 146.8 & 563.4 & 464.6 & 319.7 & 216.1 & 140.5 & 85.9 \\ \hline
+\end{tabular}
+\caption{Tak samo jak Tab. \ref{table:Cu-Cu}, ale dla zderzeń $^{238}$U+$^{238}$U.}\label{table:U-U}
+
+\end{table}
+
+Otrzymane następnie rozkłady krotności $N(\eta)$ przedstawiono na \Crefrange{fig:Cu-Au}{fig:U-U} Niestety, w tym wypadku do porównania dostępne były tylko dane zmierzone dla $\eta = 0$, czyli kierunku poprzecznego. Na dodatek, dla zderzeń U+U były to zderzenia przy $\sqrt{s_{_{NN}}} = 193~\text{GeV}$ \cite{Adare:2015bua}, co jednak jest pomijalną różnicą w obliczu niedokładności wyznaczenia rozkładów oraz niepewności pomiarowych. Te ograniczone dane pozwalają najwyżej na stwierdzenie, że - szczególnie dla zderzeń centralnych - należy odrzucić model zranionych nukleonów. Nie ma natomiast podstaw, by uznać za błędne wyniki pozostałych dwóch.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_Cu-Au.pdf}
+\caption{Tak samo jak Rys. \ref{fig:p-Al}, ale dla zderzeń $^{63}$Cu+$^{197}$Au. Pojedyncze punkty dla $\eta=0$ przedstawiają dane pomiarowe PHENIX \cite{Adare:2015bua}.}\label{fig:Cu-Au}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.20]{img/N_U-U.pdf}
+\caption{Tak samo jak Rys. \ref{fig:p-Al}, ale dla zderzeń $^{238}$U+$^{238}$U. Pojedyncze punkty dla $\eta=0$ przedstawiają dane pomiarowe PHENIX przy $\sqrt{s_{_{NN}}} = 193~\text{GeV}$ \cite{Adare:2015bua}.}\label{fig:U-U}
+\end{center}
+\end{figure}
+
+
+\subsection{Obserwacje}
+\paragraph{}
+Na podstawie tych wyników można sie pokusić o pewne ogólne obserwacje i podstawowe wnioski. 
+\begin{itemize}
+\item W przypadku zderzeń asymetrecznych, w miarę przechodzenia od zderzeń centralnych do peryferycznych, rozkład staje się bardziej symetryczny. Jest to konsystentne z omawianymi modelami zranionych konstytuentów, ponieważ mały obiekt taki jak proton czy deuter może mieć porównywalną liczbę zranionych konstytuentów co ,,obrzeże'' większego jądra (np. Au), ale raczej nie taką jak jego centralna część, gdzie mógłby ,,zranić'' nawet około 10 nukleonów.
+\item W przypadku zderzeń asymetrycznych małego jądra z dużym wszystkie trzy modele dobrze odtwarzają dane. Natomiast dla zderzeń symetrycznych większych układów \footnote{a także, prawdopodobnie, nieymetrycznych większych układów, lecz niewielka ilość danych dla Cu+Au jest przeszkodą w lepszym poznaniu tego przypadku.} model zranionych nukleonów ewidentnie pozostaje poniżej danych, podczas gdy nie ma podstaw do odrzucenia pozostałych dwóch modeli, które w zadowalający sposób odtwarzają wyniki eksperymentalne (w granicach niepewności).
+\end{itemize}
+
+\newpage
+\section{Dalsze kierunki badań}
+\subsection{Niezranione kwarki}
+\paragraph{}
+Jak już zaznaczono w rozdziale \ref{fkcje-emisji}, funkcje emisji pochodzące od zranionych konstytuentów są wystarczające do opisu rozkładów krotności cząstek w ograniczonym zakresie pseudorapidity. Natomiast w tzw. regionach fragmentacji {\color{blue}[chyba kiedyś o to pytałem, ale niestety zapomniałem. Mógłby Pan mi opowiedzieć jeszcze raz, co to są/ jak się definiuje regiony fragmentacji?]} inne efekty mają znaczący wkład do produkcji cząstek. Przede wszystkim, jeśli rozważymy modele zranionych kwarków oraz zranionych kwarków i dikwarków \footnote{które, jak już pokazała ta praca, stanowią lepszy opis produkcji cząstek, niż model zranionych nukleonów.}, produkcja zachodzi też w wyniku rozpadu \textit{niezranionych} konstytuentów, ale należących do zranionych nukleonów \cite{Bialas:2007eg}. W tym wypadku powiemy, że nukleon jest zraniony, jeśli zraniony jest choć jeden z jego konstytuentów. Jako że te niezranione konstytuenty mają nie-neutralny ładunek kolorowy, muszą ulec rozpadowi w obserwowalne cząstki, neutralne kolorowo. Mechanizm może być rozumiany jako rozpad kolorowej struny rozciągniętej pomiędzy zranionym i niezranionym konstytuentem. Bowiem, jak wiadomo, przy pewnych odległościach, energia potrzebna do produkcji nowych cząstek jest mniejsza niż do dalszego rozciągnięcia tej struny.
+
+Zatem równ. (\ref{eq:dnch-deta}) należy uzupełnić o dodatkowe składniki, otrzymując:
+\begin{equation} \label{eq:n-with-unwounded}
+N(\eta) = w_L F(\eta) + w_R F(-\eta) + \overline{w}_L U(\eta) + \overline{w}_R U(-\eta)  \,,
+\end{equation}
+gdzie $U(\eta)$ jest rozkładem krotności cząstek emitowanych przez rozpad niezranionych konstytuentów (należących do zranionych nukleonów),\\
+zaś $\overline{w}_L$, $\overline{w}_R$ są liczbami niezranionych konstytuentów w zranionych nukleonach, odpowiednio w jądrze poruszającym się w lewo i w prawo.
+
+Ponieważ po dodaniu do siebie konstytuentów zranionych i niezranionych w zranionych nukleonach otrzymamy liczbę wszystkich konstytuentów w zranionych nukleonach, więc oczywiste jest, że zachodzą równości:
+\begin{equation}
+w_q + \overline{w}_q = 3 w_n \quad \text{(WQM)}
+\end{equation}
+oraz
+\begin{equation}
+w_c + \overline{w}_c = 2 w_n \quad \text{(WQDM)}\,,
+\end{equation}
+gdzie przez $w_c$, $\overline{w}_c$ oznaczono łączną liczbę, odpowiednio zranionych i niezranionych, konstytuentów w modelu zranionych kwarków i dikwarków, tzn. $w_c = w_q' + w_d$. 
+
+Jak pokazano wyżej, wkład niezranionych konstytuentów nie jest potrzebny do odtworzenia danych w zakresie $|\eta| \le 3$, dlatego należy się spodziewać, że funkcja $U(\eta)$ ma zauważalnie różne od 0 wartości dopiero poza tym zakresem.
+
+Wychodząc z równ. (\ref{eq:n-with-unwounded}), możemy wyprowadzić wzór na rozkład wkładu niezranionych konstytuentów:
+\begin{equation} \label{eq:unqound-fun}
+U(\eta) = \frac{\overline{w}_L N(\eta) - \overline{w}_R N(-\eta) - (w_L \overline{w}_L - w_R \overline{w}_R)F(\eta) + (w_R \overline{w}_L - w_L \overline{w}_R)F(-\eta)}{(\overline{w}_L + \overline{w}_R)(\overline{w}_L - \overline{w}_R)}\,.
+\end{equation}
+
+Na podstawie tego równania, można zauważyć, że
+\begin{itemize}
+	\item Do wyznaczenia funkcji $U(\eta)$ także należy bazować na zderzeniach asymetrycznych, aby czynnik $(\overline{w}_L - \overline{w}_R)$ znajdujący się w mianowniku był różny od 0.
+	\item Liczby zranionych i niezranionych konstytuentów można łatwo otrzymać z symulacji takiej jak wyżej omawiana.
+	\item Rozkład $N(\eta)$ można, tak jak uprzednio, wziąć z danych PHOBOS ze zderzeń d+Au przy energii 200~GeV, ale tym razem w najszerszym dostępnym zakresie $\eta$, bo oczekujemy istotnej części funkcji $U$ dla dużych $|\eta|$.
+	\item Do wyznaczenia $U(\eta)$ konieczna jest także znajomość funkcji $F(\eta)$ w szerokim zakresie $\eta$, podczas gdy w sposób kompetentny wyznaczono jej przebieg jedynie dla $|\eta| \le 3$. Aby możliwe było wyprowadzenie $U(\eta)$, należy więc zapostulować jakąś postać $F(\eta)$ dla $|\eta| > 3$ i wtedy otrzymać $U(\eta)$. Następnie należałoby spróbować odtworzyć rozkłady $N(\eta)$, mając $F(\eta)$ i $U(\eta)$ oraz ocenić skuteczność. Kolejnym krokiem będzie modyfikacja postulowanego $F(\eta)$ aż do zadowalającego zreprodukowania danych $N(\eta)$.
+\end{itemize}
+
+W pierwszym podejściu zapostulowano następujący przebieg funkcji emisji:
+\begin{equation}
+\widetilde{F}(\eta) = 
+	\begin{cases} 
+		0, &\eta < -\eta_0 - 1 \\
+		a\eta + b, &-\eta_0 - 1 \le \eta < -\eta_0 \\
+		F(\eta), &|\eta| \le \eta_0 \\
+		0, &\eta > \eta_0
+	\end{cases}\,,
+\end{equation}
+gdzie $F(\eta)$ jest wyznaczoną uprzednio funkcją emisji rozszerzoną na szerszy zakres $\eta$,\\
+$\eta_0 > 0 $ jest miejscem zerowym funkcji $F(\eta)$, \\
+$a$, $b$ - są współczynnikami odcinka funkcji liniowej łączącego punkty $(-\eta_0 - 1, 0)$ i $(-\eta_0, F(-\eta_0))$.
+
+Mając taką $\widetilde{F}(\eta)$, wyznaczono na podstawie równania (\ref{eq:unqound-fun}), funkcję $U(\eta)$ dla \textit{minimum-bias}. Otrzymany wynik oraz funkcję $\widetilde{F}(\eta)$ zaprezentowano na Rys. \ref{fig:unwound-fun}.
+
+\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=0.75\textwidth]{img/unwound-min-bias.pdf}
+	\vspace{-0.1in}
+		\caption{ {\color{blue} (Tu będzie ładniejszy wykres, ale muszę najpierw przerobić i puścić kilka programów, żeby się zgadzało. Nie spodziewam się jednak wielkiej rewolucji.)}Zapostulowana (na zakresie $|\eta| > 3$) funkcja emisji $\widetilde{F}(\eta)$ zranionego kwarku w modelu WQM  oraz uzyskana na jej podstawie funkcja emisji od rozpadu niezranionego kwarku $U(\eta)$.} \label{fig:unwound-fun}
+	\end{center}
+\end{figure}
+
+Oczywiście wynik ten jest tylko wstępny i ma tylko na celu pokazać, jak można przeprowadzić próbę włączenia wkładu niezranionych kwarków do omawianego problemu. Wymaga on dalszej weryfikacji i dobrania optymalnych parametrów, co jednak wykracza poza zakres niniejszej pracy.
+
+\paragraph{}
+\subsection{(?) Nawiązanie do strun Broniowskiego}
+{\color{blue} To były chyba zbyt Napoleońskie plany i sobie daruje ten punkt (wydaje mi się, że praca i tak ma sporą zawartość, choć nie mi to oceniać), ale fajnie by było, jakbyśmy o tym podyskutowali i jakby Pan wytłumaczył coś na ten temat.}
+
+\newpage
+\section{Podsumowanie}
+{\color{blue}I conclude that when I'm done with my thesis, life will be better\footnote{znalezione w Internecie.}.}
+
+\paragraph{}
+Niniejszą pracę magisterską można podsumować w następujących punktach:
+\begin{enumerate}[label=(\roman*)]
+	\item Korzystając z funkcji dopasowanych do danych PHOBOS dla zderzeń d+Au przy energii $\sqrt{s_{_{NN}}} = 200~\text{GeV}$ oraz wyników symulacji Monte Carlo według modelu Glaubera, uzyskano funkcje emisji dla zranionego konstytuentu w trzech modelach: modelu zranionych nukleonów, modelu zranioncyh kwarków i dikwarków oraz w modelu zranionych kwarków.
+	\item Na podstawie funkcji emisji dla \textit{minimum-bias}, czyli uśredniając po wszystkich centralnościach zderzeń, przewidziano rozkłady krotności cząstek naładowanych $dN_{ch}/d\eta$ w funkcji pseudorapidity dla różnych zderzających się układów, zarówno asymetrycznych jak i symetrycznych i dla różnych centralności przy tej samej energii.
+	\item W zderzeniach asymetrycznych wszystkie trzy modele są zgodne z danymi eksperymentalnymi, w granicach niepewności. Zostało to już także pozytywnie zweryfikowane dla WQM przez kolaborację PHENIX. 
+	\item W zderzeniach symetrycznych takich jak Cu+Cu lub Au+Au tylko WQM i WQDM dają nadal wyniki zgodne z pomiarami, podczas gdy WNM niedoszacowuje liczby produkowanych cząstek i nie może być stosowany. Dla zderzeń proton-proton wszystkie trzy modele dają dobre rezultaty.
+	\item Można więc powiedzieć, że jeden minimalistyczny i praktycznie bez-parametrowy model (WQM lub WQDM) jest w stanie opisać zderzenia wszystkich układów w różnych centralnościach.
+	\item Zaprezentowano również wstępną próbę włączenia do analizy wkładu od rozpadu niezranionych konstytuentów w zranionych nukleonach, która dla modeli WQDM i WQM daje nadzieje na wyjaśnienie rozkładów $dN_{ch}/d\eta$ w szerszym zakresie $\eta$.
+	\item W przyszłości planuje się także przetestowanie modelu dla innych energii zderzenia, co jednak wymaga uzyskania nowych funkcji emisji, przy czym w pierwszym przybliżeniu należy przewidywać, że szerokość funkcji emisji  będzie się skalowała proporcjonalnie do $\ln(s)$, czyli proporcjonalnie do \textit{beam rapidity}, czyli rapidity nukleonów lecących w jądrze.
+	\item Wyniki pracy zostały także opisane w artykule \cite{Barej:2019xef}, wysłanym do czasopism naukowych.
+\end{enumerate}
+
+\newpage
+\appendix
+\section{Dodatek}
+\subsection{Dopasowanie rozkładu danego wzorem analitycznym do eksperymentalnych danych $N(\eta)$} \label{fity}
+Aby otrzymać bardziej stabilne rozkłady krotności $N(\eta)$, do danych eksperymentalnych PHOBOS opisujących $N(\eta)$ dla zderzeń d+Au przy $\sqrt{s_{_{NN}}} = 200~\text{GeV}$ \cite{Back:2004mr} dopasowano funckje dane wzorami analitycznymi. Właściwie, zauważono, że
+\begin{equation}
+N(\eta) = \frac{1}{2}\left[N^+(\eta) + N^-(\eta)\right]\,,
+\end{equation}
+gdzie $N^+(\eta) := N(\eta)+N(-\eta)$ jest zsymetryzowanym, zaś \\
+$N^-(\eta) := N(\eta)-N(-\eta)$ - zantysymetryzowanym rozkładem krotności.
+
+Po wyrysowaniu zantysymetryzowanych danych $N^-(\eta)$ (Rys. \ref{fig:Nmp}(a)) można zauważyć, że podlegają one zależności liniowej malejącej postaci $\widetilde{N}^-(\eta) = c\eta$, gdzie $c < 0$. Natomiast zsymetryzowana część (Rys. \ref{fig:Nmp}(b)) ma kształt rozkładu bimodalnego przypominającego rozkład normalny w dziedzinie rapidity, przetransformowany do pseudorapidity, to znaczy funkcji postaci:
+\begin{equation}\label{eq:fit-symmetr}
+\widetilde{N}^+(\eta) = A \exp \left(- \frac{y^2(\eta)}{2 \sigma_1^2} \right) \frac{T \cosh(\eta)}{\sqrt{1 + T^2 \sinh^2(\eta)}}\,,
+\end{equation}
+gdzie: $A$, $\sigma_1$ są parametrami rozkładu normalnego, \\
+$T := p_T/m_T$ jest stosunkiem pędu transwersalnego i masy transwersalnej, \\
+$y(\eta) = \ln\left( \sqrt{1 + T^2 \sinh^2(\eta)} + T \sinh(\eta) \right)$ jest zależnością rapidity od pseudorapidity. Szczegóły uzyskania tego wzoru przedstawiono w kolejnym rozdziale tego Dodatku, aby tutaj nie zaciemnić głównego wątku. Wartości parametrów $A$, $\sigma_1$, a także $T$ zostały znalezione w procedurze dopasowywania funkcji.
+
+Okazało się, że nieznacznie lepsze dopasowanie wokół $\eta = 0$ dla zsymetryzowanego rozkładu można otrzymać, przemnażając wyrażenie $\widetilde{N}^+(\eta)$ przez czynnik $\left(1 - \alpha\exp\left(- \frac{y^6(\eta)}{2\sigma_2^2}\right)\right)$, gdzie $\alpha$, $\sigma_2$ są parametrami nowego dopasowania oraz jest to niewielka poprawka ($\alpha$ jest mniejsza niż 0.005).
+
+\begin{figure}[H]
+\begin{center}
+\subfloat{{\includegraphics[scale=0.30]{img/N1.pdf}}}%
+\hspace{0.5cm}
+\subfloat{{\includegraphics[scale=0.30]{img/N2.pdf}}}%
+\caption{Dopasowania (linie) do zantysemtryzowanych (a) i zsymetryzowanych (b) danych PHOBOS (kropki) ze zderzeń d+$^{197}$Au w przedziale $|\eta| < 3$ przy $\sqrt{s_{_{NN}}}=200$ GeV \cite{Back:2004mr}.}\label{fig:Nmp}
+\end{center}
+\end{figure}
+
+
+\subsection{Wyprowadzenie wzoru na konwersję rozkładu w rapidity na rozkład w pseudorapidity}
+\paragraph{}
+Załóżmy, że znamy rozkład krotności cząstek w funkcji rapidity $dN/dy$, a chcemy otrzymać odpowiadający mu rozkład w pseudorapidity. Wtedy, jak wiadomo z matematyki:
+\begin{equation}\label{eq:conversion-y-eta}
+ \frac{dN}{d\eta} = \left. \frac{dN}{dy} \right|_{y = y(\eta)} \: \left| \frac{dy}{d\eta} \right|\,.
+\end{equation}
+Widać z tego, że konieczne jest wyznaczenie zależności rapidity od pseudorapidity $y(\eta)$.
+
+Definicję rapidity \footnote{Oczywiście operujemy w jednostkach, gdzie $c=1$.}:
+\begin{equation} \label{eq:rapid}
+y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right)\,
+\end{equation}
+można łatwo przekształcić do postaci:
+\begin{equation} \label{eq:rapid1}
+y = \frac{1}{2} \ln \left( \frac{(E + p_z)^2}{E^2 - p_z^2} \right)\,.
+\end{equation}
+Uwzględniając relatywistyczny wzór na energię: $E^2 = p^2 + m^2$, a także definicje pędu transwersalnego:
+\begin{equation} \label{eq:pt}
+\vec{p_T} = \vec{p_x} + \vec{p_y} \,
+\end{equation}
+oraz masy transwersalnej:
+\begin{equation} \label{eq:mt}
+m_T = \sqrt{m^2 + p_T^2} \,,
+\end{equation}
+otrzymamy:
+\begin{equation} \label{eq:rapid2}
+y = \frac{1}{2} \ln \left( \frac{(E + p_z)^2}{m_T^2} \right)\,.
+\end{equation}
+Obkładając to ostatnie wyrażenie eksponentą i kładąc $E = \sqrt{p_z^2 + m_T^2}$, po dokonaniu kilku przekształeceń możemy dojść do zależości:
+\begin{equation} \label{eq:pz-rapid}
+p_z = m_{T} \sinh(y)\,.
+\end{equation}
+
+Podobnie, korzystamy z definicji pseudorapidity:
+\begin{equation} \label{eq:pseudorap}
+\eta = \frac{1}{2} \ln \left( \frac{p + p_z}{p - p_z} \right)\,,
+\end{equation}
+którą można przekształcić do postaci
+\begin{equation} \label{eq:pseudorap1}
+\eta = -\frac{1}{2} \ln \left( \frac{(p - p_z)^2}{p_T^2} \right) = -\ln \left( \frac{(p - p_z)}{p_T} \right) \,.
+\end{equation}
+Dość analogiczne postępowanie jak dla rapidity, tj. obłożenie eksponentą, wstawienie $p = \sqrt{p_T^2 + p_z^2}$ i dokonanie kilku przekształceń, doprowadza do wyniku:
+\begin{equation} \label{eq:pz-pseudorap}
+p_z = p_{T} \sinh(\eta)\,.
+\end{equation}
+
+Otrzymaliśmy zatem zależności pędu wzdłuż wiązki od rapidity (równ. (\ref{eq:pz-rapid})) oraz od pseudorapidity (równ. (\ref{eq:pz-pseudorap})). Łącząc oba równania mamy:
+\begin{equation} \label{eq:pz-rapid-pseudorapid}
+m_{T} \sinh(y) = p_{T} \sinh(\eta)\,,
+\end{equation}
+skąd:
+\begin{equation} \label{eq:rapid-pseudorapid-1}
+y = \text{arsinh}\left(\frac{p_{T}}{m_T} \sinh(\eta)\right)\,.
+\end{equation}
+Używając matematycznej zależności:
+\begin{equation} \label{eq:arcsinh}
+\text{arsinh}(x) =  \ln\left(x + \sqrt{x^2 + 1} \right) \,,
+\end{equation}
+ostatecznie otrzymamy poszukiwaną funkcję rapidity od pseudorapidity:
+\begin{equation} \label{eq:rapid-pseudorapid}
+y(\eta) = \ln\left(T\sinh(\eta) + \sqrt{T^2\sinh^2(\eta) + 1} \right) \,.
+\end{equation}
+Do pełni szczęścia i skompletowania równania (\ref{eq:conversion-y-eta}) na konwersję rozkładów potrzeba nam jeszcze pochodnej, którą można już wyliczyć wprost:
+\begin{equation} \label{eq:rapid-pseudorapid-deriv}
+\frac{dy}{d\eta} = \frac{T\cosh(\eta)}{\sqrt{T^2\sinh^2(\eta) + 1}} \,.
+\end{equation}
+W ten sposób zakończyliśmy wyprowadzenie potrzebne do zapisania równ. (\ref{eq:fit-symmetr}).
+
+
+\subsection{Wyprowadzenie  warunku $\langle r^2 \rangle$  = $r_p^2$ i współczynnika $C$ dla położeń w WQDM} \label{appendix-proof-C-and-rms}
+Jak zostało podane w rozdz \ref{algorytm}, rozkład położeń konstytuentnych kwarków wokół środka nukleonu dany jest wzorem:
+\begin{equation}\label{eq:eq-quark-distr-basic}
+\rho(\vec{r})=\rho_0\exp\left(-\frac{r}{a}\right)\,.
+\end{equation}
+\begin{itemize}
+\item Zacznijmy od unormowania rozkładu, co doprowadzi nas do znalezienia stałej $\rho_0$. Warunek normowania:
+\begin{equation}\label{eq:norm-integral}
+\int\limits_{\Omega} d^3\vec{r}\: \rho(\vec{r}) = 1\,.
+\end{equation}
+Korzystając ze współrzędnych sferycznych:
+\begin{equation}
+\int\limits_{0}^{2\pi}d\varphi \int\limits_{0}^{\pi}d\theta \sin\theta \int\limits_{0}^{+\infty}dr\, r^2 \rho(\vec{r}) = 1\,.
+\end{equation}
+Zauważając, że funkcja $\rho(\vec{r})$ jest sferycznie symetryczna (zależy tylko od $r$), mamy dalej:
+\begin{equation}
+4\pi \rho_0 \int\limits_{0}^{+\infty}dr\: r^2 \: \exp\left(-\frac{r}{a}\right) = 1
+\end{equation}
+Korzystając ze znanej całki postaci:
+\begin{equation} \label{eq:integral01}
+\int\limits_{0}^{+\infty}dx\: x^n \: e^{-ax} = \frac{n!}{a^{n+1}}\,,
+\end{equation}
+otrzymamy:
+\[ 4\pi \rho_0 \, a^3\, 2! = 1\,. \]
+Zatem współczynnik normalizacyjny:
+\begin{equation}\label{eq:coeff}
+\rho_0 = \frac{1}{4\pi \, 2a^3}
+\end{equation}
+
+\item Mając tę wiedzę, obliczmy $\langle r^2 \rangle$:
+\begin{equation} 
+\langle r^2 \rangle = \int\limits_{\Omega} d^3\vec{r}\: r^2 \: \rho(\vec{r})
+\end{equation}
+
+\[
+\begin{split}
+\langle r^2 \rangle & = \int\limits_{0}^{2\pi}d\varphi \int\limits_{0}^{\pi}d\theta \sin\theta \int\limits_{0}^{+\infty}dr \: r^2 \: r^2 \: \rho(\vec{r}) \\
+ & = 4\pi \rho_0 \int\limits_{0}^{+\infty}dr\: r^4 \: \exp\left(-\frac{r}{a}\right)
+\end{split}
+\]
+Następnie, ponownie korzystając ze wzoru (\ref{eq:integral01}) oraz otrzymanego w (\ref{eq:coeff}) współczynnika, mamy:
+\[ \langle r^2 \rangle = 4\pi \: \frac{1}{4\pi \, 2a^3} \: a^5 \: 4! \]
+Ostatecznie:
+\begin{equation} 
+\langle r^2 \rangle = 12 a^2\,.
+\end{equation}
+Mając natomiast na uwadze, że $a = r_p/\sqrt{12}$, widzimy, iż istotnie $\langle r^2 \rangle = r_p^2$.
+
+\item Natomiast dla rozkładu kwarków w WQDM mamy zmodyfikowaną postać równ. (\ref{eq:eq-quark-distr-basic}):
+\begin{equation}
+\rho(\vec{r}) = \widetilde{\rho_0} \exp\left(-\frac{Cr}{a}\right)
+\end{equation}
+Normując ten rozkład w oparciu o warunek (\ref{eq:norm-integral}) i przeprowadzając zupełnie analogiczne rozumowanie, otrzymujemy:
+\begin{equation}\label{eq:coeff2}
+\widetilde{\rho_0} = \frac{C^3}{4\pi \, 2a^3}
+\end{equation}
+\item Ponieważ w modelu WQDM każdy nukleon składa się z jednego kwarku i jednego dikwarku, średnia kwadratów położeń wszystkich konstytuentów jest średnią arytmetyczną średnich kwadratów położeń kwarków i dikwarków:
+\begin{equation}\label{eq:avg-sq-wqdm}
+\langle r^2 \rangle = \frac{\langle r_q^2 \rangle + \langle r_d^2 \rangle}{2}\,,
+\end{equation}
+gdzie: 
+
+\begin{equation}
+\langle r_q^2 \rangle = \int\limits_{\Omega} d^3\vec{r}\: \: r^2 \, \rho(\vec{r})
+\end{equation}
+\begin{equation}
+\langle r_d^2 \rangle = \int\limits_{\Omega} d^3\vec{r}\: \left(\frac{1}{2}r\right)^2 \, \rho(\vec{r})
+\end{equation}
+
+czyli we współrzędnych sferycznych:
+\[
+\langle r_q^2 \rangle = \int\limits_{0}^{2\pi}d\varphi \int\limits_{0}^{\pi}d\theta \sin\theta \int\limits_{0}^{+\infty}dr \: r^2 \: r^2 \: \rho(\vec{r})\,,
+\]
+\[
+\langle r_d^2 \rangle = \int\limits_{0}^{2\pi}d\varphi \int\limits_{0}^{\pi}d\theta \sin\theta \int\limits_{0}^{+\infty}dr \: r^2 \: \left(\frac{1}{2}r\right)^2 \, \rho(\vec{r})\,.
+\]
+Licząc te całki podobnie jak poprzednio, otrzymujemy:
+\begin{equation}
+\langle r_q^2 \rangle = \frac{4! \: a^2}{2C^2}\,,
+\end{equation}
+\begin{equation}
+\langle r_d^2 \rangle = \frac{1}{4}\: \frac{4! \: a^2}{2C^2}\,.
+\end{equation}
+Wstawiając te wyniki do równ. (\ref{eq:avg-sq-wqdm}), mamy:
+\begin{equation}
+\langle r^2 \rangle = \frac{15 a^2}{2C^2}
+\end{equation}
+Ponieważ $\langle r^2 \rangle = r_p^2$, więc:
+\[ 12a^2 = \frac{15 a^2}{2C^2}  \]
+skąd otrzymujemy poszukiwaną wartość współczynnika $C$:
+\begin{equation}
+C= \sqrt{\frac{15}{24}} = \frac{\sqrt{10}}{4} \approx 0.79\,.
+\end{equation}
+\end{itemize}
+
+\newpage
+\begin{thebibliography}{9}
+\bibitem{griffiths} D.~Griffiths, \textit{Introduction to Elementary Particles}
+
+\bibitem{schroeder} D.~Schroeder, \textit{An Introduction to Thermal Physics}
+
+\bibitem{Andronic:2017pug} 
+  A.~Andronic, P.~Braun-Munzinger, K.~Redlich and J.~Stachel,
+  %``Decoding the phase structure of QCD via particle production at high energy,''
+  Nature {\bf 561}, no. 7723, 321 (2018)
+
+\bibitem{rhic-website} Strona internetowa RHIC BNL https://www.bnl.gov/rhic/complex.asp (dostęp 21.06.2019)
+
+\bibitem{Back:2004mr} 
+  B.~B.~Back {\it et al.} [PHOBOS Collaboration],
+  %``Scaling of charged particle production in d + Au collisions at s(NN)**(1/2) = 200-GeV,''
+  Phys.\ Rev.\ C {\bf 72}, 031901 (2005)
+  % doi:10.1103/PhysRevC.72.031901
+  % [nucl-ex/0409021].
+
+\bibitem{Adare:2015bua} 
+  A.~Adare {\it et al.} [PHENIX Collaboration],
+  %``Transverse energy production and charged-particle multiplicity at midrapidity in various systems from $\sqrt{s_{NN}}=7.7$ to 200 GeV,''
+  Phys.\ Rev.\ C {\bf 93}, no. 2, 024901 (2016)
+%  doi:10.1103/PhysRevC.93.024901
+  [arXiv:1509.06727 [nucl-ex]].
+
+\bibitem{Alver:2010ck}  B.~Alver {\it et al.} [PHOBOS Collaboration],
+  %``Phobos results on charged particle multiplicity and pseudorapidity distributions in Au+Au, Cu+Cu, d+Au, and p+p collisions at ultra-relativistic energies,''
+  Phys.\ Rev.\ C {\bf 83}, 024913 (2011)
+  % doi:10.1103/PhysRevC.83.024913
+  % [arXiv:1011.1940 [nucl-ex]].
+
+\bibitem{Back:2002wb} 
+  B.~B.~Back {\it et al.},
+  %``The Significance of the fragmentation region in ultrarelativistic heavy ion collisions,''
+  Phys.\ Rev.\ Lett.\  {\bf 91}, 052303 (2003)
+  % doi:10.1103/PhysRevLett.91.052303
+  % [nucl-ex/0210015].
+
+\bibitem{Barej:pracaInz18} 
+  M.~Barej, \textit{Praca inżynierska: Funkcje emisji zranionych nukleonów i kwarków w zderzeniach d+Au przy energii 200 GeV}, (2018)
+
+\bibitem{Barej:2017kcw} 
+  M.~Barej, A.~Bzdak and P.~Gutowski,
+  %``Wounded-quark emission function at the top energy available at the BNL Relativistic Heavy Ion Collider,''
+  Phys.\ Rev.\ C {\bf 97}, no. 3, 034901 (2018)
+  % doi:10.1103/PhysRevC.97.034901
+  % [arXiv:1712.02618 [hep-ph]].
+
+\bibitem{Bialas:1976ed} 
+  A.~Białas, M.~Bleszyński, W.~Czyż,
+  %``Multiplicity Distributions in Nucleus-Nucleus Collisions at High-Energies,''
+  Nucl.\ Phys.\ B {\bf 111}, 461 (1976).
+  % doi:10.1016/0550-3213(76)90329-1
+
+\bibitem{Bialas:2007eg} 
+  A.~Bialas and A.~Bzdak,
+  %``Wounded quarks and diquarks in high energy collisions,''
+  Phys.\ Rev.\ C {\bf 77}, 034908 (2008)
+  % doi:10.1103/PhysRevC.77.034908
+  % [arXiv:0707.3720 [hep-ph]].
+
+\bibitem{Bialas:1977en} 
+  A.~Bialas, W.~Czyz, W.~Furmanski,
+  %``Particle Production in Hadron-Nucleus Collisions and the Quark Model,''
+  Acta Phys.\ Polon.\ B {\bf 8}, 585 (1977).
+
+\bibitem{Bialas:2006qf} 
+  A.~Bialas and A.~Bzdak,
+  %``Constituent quark and diquark properties from small angle proton-proton elastic scattering at high energies,''
+  Acta Phys.\ Polon.\ B {\bf 38}, 159 (2007)
+  [hep-ph/0612038].
+
+\bibitem{Loizides:2014vua} 
+  C.~Loizides, J.~Nagle, P.~Steinberg,
+  %``Improved version of the PHOBOS Glauber Monte Carlo,''
+  SoftwareX {\bf 1-2}, 13 (2015)
+%  doi:10.1016/j.softx.2015.05.001
+  [arXiv:1408.2549 [nucl-ex]].
+
+\bibitem{hulthen}
+  L.~Hulthen and M.~Sugawara, Handbuch der Physik 39, 1 (1957).
+
+\bibitem{Carlson:1997qn} 
+  J.~Carlson and R.~Schiavilla,
+  %``Structure and dynamics of few nucleon systems,''
+  Rev.\ Mod.\ Phys.\  {\bf 70}, 743 (1998).
+
+\bibitem{DeJager:1987qc} 
+  H.~De Vries, C.~W.~De Jager and C.~De Vries,
+  %``Nuclear charge and magnetization density distribution parameters from elastic electron scattering,''
+  Atom.\ Data Nucl.\ Data Tabl.\  {\bf 36}, 495 (1987).
+
+\bibitem{Adler:2013aqf} 
+  S.~S.~Adler {\it et al.} [PHENIX Collaboration],
+  %``Transverse-energy distributions at midrapidity in p+p, d+Au, and Au+Au collisions at $\sqrt{s_{NN}}=62.4–200$ GeV and implications for particle-production models,''
+  Phys.\ Rev.\ C {\bf 89}, no. 4, 044905 (2014)
+
+\bibitem{Hofstadter:1956qs} 
+  R.~Hofstadter,
+  %``Electron scattering and nuclear structure,''
+  Rev.\ Mod.\ Phys.\  {\bf 28}, 214 (1956).
+
+\bibitem{Bialas:2006kw} 
+  A.~Bialas and A.~Bzdak,
+  %``Wounded quarks and diquarks in heavy ion collisions,''
+  Phys.\ Lett.\ B {\bf 649}, 263 (2007)
+  Erratum: [Phys.\ Lett.\ B {\bf 773}, 681 (2017)]
+
+\bibitem{Adare:2018toe} 
+  A.~Adare {\it et al.} [PHENIX Collaboration],
+  %``Pseudorapidity dependence of particle production and elliptic flow in asymmetric nuclear collisions of $p$$+$Al, $p$$+$Au, $d$$+$Au, and $^{3}$He$+$Au at $\sqrt{s_{_{NN}}}=200$ GeV,''
+  Phys.\ Rev.\ Lett.\ {\bf 121}, 222301 (2018) [arXiv:1807.11928 [nucl-ex]]
+
+\bibitem{Alver:2007aa} 
+  B.~Alver {\it et al.} [PHOBOS Collaboration],
+  %``System size, energy and centrality dependence of pseudorapidity distributions of charged particles in relativistic heavy ion collisions,''
+  Phys.\ Rev.\ Lett.\  {\bf 102}, 142301 (2009)
+%  doi:10.1103/PhysRevLett.102.142301
+  [arXiv:0709.4008 [nucl-ex]].
+
+\bibitem{Barej:2019xef} 
+  M.~Barej, A.~Bzdak and P.~Gutowski,
+  %``Wounded nucleon, quark and quark-diquark emission functions versus experimental results from RHIC,''
+  arXiv:1904.01435 [hep-ph].
+
+
+
+
+\end{thebibliography}
+
+
+
+\end{document}
+
